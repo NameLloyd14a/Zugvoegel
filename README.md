@@ -13,7 +13,7 @@ In order for the program to work correctly, install [Cinemagoer](https://github.
 ````
 pip install git+https://github.com/cinemagoer/cinemagoer
 ````
-(the program was tested using Version 2023.10.22)
+
 
 
 
