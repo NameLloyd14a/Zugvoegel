@@ -15,7 +15,7 @@ pip install git+https://github.com/cinemagoer/cinemagoer
 ````
 (the program was tested using Version 2023.10.22)
 
-also install [Tkinter](https://docs.python.org/3/library/tkinter.html) with
+
 
 
 
