@@ -96,20 +96,6 @@
             text-decoration: underline;
         }
 
-        #refresh-button {
-            padding: 10px 20px;
-            font-size: 16px;
-            cursor: pointer;
-            background-color: #04AA6D;
-            color: white;
-            border: none;
-            border-radius: 5px;
-            margin-top: 20px;
-        }
-
-        #refresh-button:hover {
-            background-color: #008C5A;
-        }
     </style>
 </head>
 
@@ -126,7 +112,6 @@
         </div>
 
         <div class="menu">
-            <a class="menu-links" href="#" onclick="loadHomePage()"> Home </a>
             <a class="menu-links" href="#" onclick="openNews()"> News </a>
             <a class="menu-links" href="javascript:void(0);" onclick="openContactTab()"> Contact </a>
             <a class="menu-links" href="#" onclick="openAboutUs()"> About </a>
@@ -140,9 +125,6 @@
     </div>
 
     <script>
-        const funFacts = [
-            // ... (your fun facts array)
-        ];
 
         function loadHomePage() {
             document.getElementById("content-container").innerHTML = `
@@ -185,17 +167,6 @@
                     <p>${randomFunFact}</p>
                     <button id="refresh-button" onclick="refreshFunFact()">Refresh Fun Fact</button>
                 </div>
-            `;
-        }
-
-        function refreshFunFact() {
-            const randomFactIndex = Math.floor(Math.random() * funFacts.length);
-            const randomFunFact = funFacts[randomFactIndex];
-
-            document.getElementById("fun-facts-container").innerHTML = `
-                <h1>Fun Facts</h1>
-                <p>${randomFunFact}</p>
-                <button id="refresh-button" onclick="refreshFunFact()">Refresh Fun Fact</button>
             `;
         }
     </script>
