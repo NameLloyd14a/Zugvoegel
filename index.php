@@ -42,15 +42,24 @@ li a:hover:not(.active) {
 #home-icon {
   height: 30px; /* Adjust the height of the image */
 }
+.navbar {
+  display : flex;
+  justify-content: space-between;
+}
 </style>
 </head>
 <body>
 
-<ul>
-  <li><a class="active" href="#home"><img id="home-icon" src="website_logo.png" alt="Home"></a></li>
-  <li><a href="#news">News</a></li>
-  <li><a href="#contact">Contact</a></li>
-  <li style="float:right"><a href="#about">About</a></li>
+<ul> 
+  <div class = 'navbar'> 
+
+    <li><a class="active" href="#home"><img id="home-icon" src="website_logo.png" alt="Home"></a></li>
+  <div>
+    <li><a href="#news">News</a></li>
+    <li><a href="#contact">Contact</a></li>
+    <li style="float:right"><a href="#about">About</a></li>
+  </div>
+
 </ul>
 
 </body>
