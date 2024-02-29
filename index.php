@@ -47,8 +47,8 @@
         .menu-links {
             color: whitesmoke;
             text-decoration: none;
-            margin-right: 20px; /* Adjust this value to increase or decrease the spacing */
-            font-size: 24px; /* Adjust this value to make the font size larger */
+            margin-right: 20px;
+            font-size: 24px;
         }
 
         a:hover {
@@ -66,9 +66,49 @@
             font-weight: bold;
         }
 
-        /* Remove bottom margin for Home link */
         .menu-links:first-child {
             margin-bottom: 0;
+        }
+
+        #content-container {
+            margin-top: 60px;
+            padding: 20px;
+        }
+
+        #contact-container,
+        #fun-facts-container {
+            text-align: center;
+        }
+
+        #contact-container p,
+        #fun-facts-container p {
+            font-size: 18px;
+            margin-top: 20px;
+        }
+
+        #email-link {
+            color: #04AA6D;
+            font-weight: bold;
+            text-decoration: none;
+        }
+
+        #email-link:hover {
+            text-decoration: underline;
+        }
+
+        #refresh-button {
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            background-color: #04AA6D;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            margin-top: 20px;
+        }
+
+        #refresh-button:hover {
+            background-color: #008C5A;
         }
     </style>
 </head>
@@ -77,7 +117,7 @@
     <div class="navbar">
         <div class="logo">
             <div>
-                <img class="image" src="website_logo.png"href='index.php'>
+                <img class="image" src="website_logo.png" alt="Logo" onclick="loadHomePage()">
             </div>
 
             <h1 class="headline">
@@ -85,15 +125,80 @@
             </h1>
         </div>
 
-
         <div class="menu">
-
-            <a class="menu-links" href=''> News </a>
-            <a class="menu-links" href=''> Contact </a>
-            <a class="menu-links" href=''> About </a>
+            <a class="menu-links" href="#" onclick="loadHomePage()"> Home </a>
+            <a class="menu-links" href="#" onclick="openNews()"> News </a>
+            <a class="menu-links" href="javascript:void(0);" onclick="openContactTab()"> Contact </a>
+            <a class="menu-links" href="#" onclick="openAboutUs()"> About </a>
         </div>
-
     </div>
+
+    <div id="content-container">
+        <!-- Content of the page goes here -->
+        <h1>Welcome to Our Website!</h1>
+        <p>This is the home page content.</p>
+    </div>
+
+    <script>
+        const funFacts = [
+            // ... (your fun facts array)
+        ];
+
+        function loadHomePage() {
+            document.getElementById("content-container").innerHTML = `
+                <h1>Welcome to Our Website!</h1>
+                <p>This is the home page content.</p>
+            `;
+        }
+
+        function openContactTab() {
+            document.getElementById("content-container").innerHTML = `
+                <div id="contact-container">
+                    <h1>Contact Us</h1>
+                    <p>If you have any questions, please feel free to reach out to us via email:</p>
+                    <p>Email: <a id="email-link" href="mailto:vogelexperten@gmail.com">vogelexperten@gmail.com</a></p>
+                </div>
+            `;
+        }
+
+        function openAboutUs() {
+            document.getElementById("content-container").innerHTML = `
+                <h1>About Us</h1>
+                <p>Welcome to our website! We are dedicated to providing information about birds and birdwatching. Our team of experts is passionate about the avian world and aims to share their knowledge with you. Explore our site to discover fascinating facts, birding tips, and more.</p>
+            `;
+        }
+
+        function openNews() {
+            document.getElementById("content-container").innerHTML = `
+                <h1>Latest News</h1>
+                <p>Stay tuned for the latest updates and news about the birding community.</p>
+            `;
+        }
+
+        function openFunFacts() {
+            const randomFactIndex = Math.floor(Math.random() * funFacts.length);
+            const randomFunFact = funFacts[randomFactIndex];
+
+            document.getElementById("content-container").innerHTML = `
+                <div id="fun-facts-container">
+                    <h1>Fun Facts</h1>
+                    <p>${randomFunFact}</p>
+                    <button id="refresh-button" onclick="refreshFunFact()">Refresh Fun Fact</button>
+                </div>
+            `;
+        }
+
+        function refreshFunFact() {
+            const randomFactIndex = Math.floor(Math.random() * funFacts.length);
+            const randomFunFact = funFacts[randomFactIndex];
+
+            document.getElementById("fun-facts-container").innerHTML = `
+                <h1>Fun Facts</h1>
+                <p>${randomFunFact}</p>
+                <button id="refresh-button" onclick="refreshFunFact()">Refresh Fun Fact</button>
+            `;
+        }
+    </script>
 </body>
 
 </html>
