@@ -48,12 +48,13 @@
             color: whitesmoke;
             text-decoration: none;
             margin-right: 20px; /* Adjust this value to increase or decrease the spacing */
+            font-size: 24px; /* Adjust this value to make the font size larger */
         }
 
         a:hover {
             text-decoration: underline;
             color: aquamarine;
-            margin: left
+            margin: left;
         }
 
         .menu {
@@ -64,6 +65,11 @@
             align-items: center;
             font-weight: bold;
         }
+
+        /* Remove bottom margin for Home link */
+        .menu-links:first-child {
+            margin-bottom: 0;
+        }
     </style>
 </head>
 
@@ -71,7 +77,7 @@
     <div class="navbar">
         <div class="logo">
             <div>
-                <img class="image" src="website_logo.png">
+                <img class="image" src="website_logo.png"href='index.php'>
             </div>
 
             <h1 class="headline">
@@ -82,7 +88,6 @@
 
         <div class="menu">
 
-            <a class="menu-links" href='index.php'> Home</a>
             <a class="menu-links" href=''> News </a>
             <a class="menu-links" href=''> Contact </a>
             <a class="menu-links" href=''> About </a>
