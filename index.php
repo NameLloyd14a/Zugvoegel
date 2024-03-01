@@ -10,12 +10,10 @@
         body {
             font-family: "Open Sans", sans-serif;
             background-color: whitesmoke;
-
         }
 
         .image {
             width: 70%
-
         }
 
         .logo {
@@ -23,11 +21,9 @@
             justify-content: center;
             align-items: center;
             width: 20%;
-
         }
 
         .hedline {
-
             color: whitesmoke;
         }
 
@@ -41,7 +37,6 @@
         .headline {
             color: aquamarine;
             font-weight: bold;
-
         }
 
         .menu-links {
@@ -96,6 +91,29 @@
             text-decoration: underline;
         }
 
+        #fun-facts-container p {
+            font-size: 24px; /* Increased text size */
+            margin-top: 20px;
+        }
+
+        #next-fact-button {
+            background-color: #04AA6D;
+            color: whitesmoke;
+            border: none;
+            padding: 15px 20px;
+            font-size: 20px;
+            border-radius: 10px; /* Added border-radius for a rounded look */
+            cursor: pointer;
+            transition: transform 0.2s ease-in-out; /* Added scaling animation */
+        }
+
+        #next-fact-button:hover {
+            background-color: #038353;
+        }
+
+        #next-fact-button:active {
+            transform: scale(0.95); /* Slight scaling when button is pressed */
+        }
     </style>
 </head>
 
@@ -105,16 +123,14 @@
             <div>
                 <img class="image" src="website_logo.png" alt="Logo" onclick="loadHomePage()">
             </div>
-
-            <h1 class="headline">
-                Zugvögel
-            </h1>
+            <h1 class="headline">Zugvögel</h1>
         </div>
 
         <div class="menu">
-            <a class="menu-links" href="#" onclick="openNews()"> News </a>
-            <a class="menu-links" href="javascript:void(0);" onclick="openContactTab()"> Contact </a>
-            <a class="menu-links" href="#" onclick="openAboutUs()"> About </a>
+            <a class="menu-links" href="#" onclick="openNews()">News</a>
+            <a class="menu-links" href="javascript:void(0);" onclick="openContactTab()">Contact</a>
+            <a class="menu-links" href="#" onclick="openAboutUs()">About</a>
+            <a class="menu-links" href="#" onclick="openFunFacts()">Fun Facts</a>
         </div>
     </div>
 
@@ -125,6 +141,12 @@
     </div>
 
     <script>
+        const funFacts = [
+            "Hummingbirds are the only birds that can fly backward.",
+            "Owls can rotate their heads up to 270 degrees.",
+            "The peregrine falcon is the fastest bird and can reach speeds of over 240 mph."
+            // Add more bird facts here
+        ];
 
         function loadHomePage() {
             document.getElementById("content-container").innerHTML = `
@@ -165,7 +187,7 @@
                 <div id="fun-facts-container">
                     <h1>Fun Facts</h1>
                     <p>${randomFunFact}</p>
-                    <button id="refresh-button" onclick="refreshFunFact()">Refresh Fun Fact</button>
+                    <button id="next-fact-button" onclick="openFunFacts()">Next Fact</button>
                 </div>
             `;
         }
