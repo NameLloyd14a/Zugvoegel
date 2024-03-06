@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html>
-
 <head>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -117,6 +116,21 @@
     </style>
 </head>
 
+<?php
+$servername = "localhost:8889";
+$username = "vogelexperte";
+$password = "vogel";
+$dbname = "zugvoegel";
+
+// Create connection
+$conn = new mysqli($servername, $username, $password, $dbname);
+// Check connection
+if ($conn->connect_error) {
+  die("Connection failed: " . $conn->connect_error);
+} else {
+    echo "Connection to database established";
+}
+?>
 <body>
     <div class="navbar">
         <div class="logo">
