@@ -160,7 +160,14 @@
         }
 
         function openAboutUs() {
-            window.location="about.php";
+            document.getElementById("content-container").innerHTML = `
+                <div id="contact-container">
+                    <h1>Contact Us</h1>
+                    <p>If you have any questions, please feel free to reach out to us via email:</p>
+                    <p>Email: <a id="email-link" href="mailto:vogelexperten@gmail.com">vogelexperten@gmail.com</a></p>
+                </div>
+            `;
+
         }
 
         function openPlaces() {
@@ -170,6 +177,8 @@
         function openFunFacts() {
             window.location="funfact.php"; 
         }
+
+        openAboutUs();
     </script>
 </body>
 
