@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<<!DOCTYPE html>
 <html>
 <head>
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -39,17 +39,16 @@
         }
         
         .titel{
-            color: black;
-            font-size: 80px;
+            color:black;
+            font-size: 60px;
             font-weight: bold;
-            align-items: center;
-            margin-top: 10px;
-            margin-left: 20px;
+            align-items: baseline;
+            
 
         }
         .titelbild{
           display: flex ;
-          justify-content: space-around;
+          justify-content: space-between;
           align-items: center;
          
           background-color: whitesmoke;
@@ -68,7 +67,7 @@
           display: flex ;
           justify-content: left;
 
-          font-size: larger;
+          font-size: 25px;
           font-weight: bold;
           margin-bottom: 30px;
 
@@ -227,6 +226,13 @@ $conn->close();
     </div>
 
     <script>
+        const funFacts = [
+            "Hummingbirds are the only birds that can fly backward.",
+            "Owls can rotate their heads up to 270 degrees.",
+            "The peregrine falcon is the fastest bird and can reach speeds of over 240 mph."
+            // Add more bird facts here
+        ];
+
         function loadHomePage() {
             window.location="index.php";
         }
