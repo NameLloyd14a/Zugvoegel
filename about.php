@@ -148,6 +148,10 @@
             <a class="menu-links" href="#" onclick="openFunFacts()">Fun Facts</a>
         </div>
     </div>
+    
+    <div id="content-container">
+        <!-- Content container for Fun Facts -->
+    </div>
 
     <script>
 
@@ -160,7 +164,14 @@
         }
 
         function openAboutUs() {
-            window.location="about.php";
+            document.getElementById("content-container").innerHTML = `
+                <div id="contact-container">
+                    <h1>Das ist unser Team.</h1>
+                    <p>Wir sind ein Junges un engagiertes Team. </p>
+                    <p>Leon Mischa Lukas</p>
+                </div>
+            `;
+
         }
 
         function openPlaces() {
@@ -170,7 +181,7 @@
         function openFunFacts() {
             window.location="funfact.php"; 
         }
+
+        openAboutUs();
     </script>
 </body>
-
-</html>
