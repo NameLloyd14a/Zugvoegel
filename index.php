@@ -118,8 +118,8 @@
 
 <?php
 $servername = "localhost:8889";
-$username = "vogelexperte";
-$password = "vogel";
+$username = "root";
+$password = "root";
 $dbname = "zugvoegel";
 
 // Create connection
