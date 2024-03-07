@@ -49,9 +49,34 @@
         }
         .titelbild{
           display: flex ;
-          justify-content: center;
-          padding: 20px;
+          justify-content: space-around;
+          align-items: center;
+         
+          background-color: whitesmoke;
+          
+
         }
+        
+        .bildtext {
+          
+          font-size: medium;
+          font-weight: 20px;
+          margin-left: 10px;
+          
+        }
+        .uberschrift{
+          display: flex ;
+          justify-content: left;
+
+          font-size: larger;
+          font-weight: bold;
+          margin-bottom: 30px;
+
+
+        }
+
+          
+        
 
         .menu-links {
             color: whitesmoke;
@@ -80,7 +105,7 @@
         }
 
         #content-container {
-            margin-top: 60px;
+            margin-top: 20px;
             padding: 20px;
         }
 
@@ -180,15 +205,25 @@ $conn->close();
         </div>
     </div>
 
-    <div id="bird-content-container">
-        <h1 class="titel" >Bird of the day</h1>
-        <div class= "titelbild">
-            <?php
+    <div id="content-container">
+        <!-- Content of the page goes here -->
+        <h1 class="titel" >  Bird of the day</h1>
+        <div class= "titelbild" >
+        <?php
             $bildData = base64_encode(file_get_contents($bild));
+            
             echo '<img src="data:image/jpeg;base64,'.$bildData.'" alt="Hier sollte ein Bild sein">';
             ?>
-          <p>text</p>
+        <div class="bildtext">
+        <div class = "uberschrift"><?php
+            echo $name;
+            ?></div>
+            <?php
+            echo $beschreibung;
+            ?>
+
         </div>
+        
     </div>
 
     <script>
