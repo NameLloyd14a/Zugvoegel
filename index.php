@@ -115,7 +115,7 @@
         }
     </style>
 </head>
-
+<title>Zugvögel</title>
 <?php
 $servername = "localhost:8889";
 $username = "root";
