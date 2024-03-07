@@ -128,6 +128,25 @@ $conn = new mysqli($servername, $username, $password, $dbname);
 if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
+$day_number = date("d");
+$sql = "SELECT * FROM `vogel` WHERE vgl_id=$day_number;";
+$result = $conn->query($sql);
+if ($result->num_rows > 0) {
+    // output data of each row
+    while($row = $result->fetch_assoc()) {
+      $name= $row["name"];
+      $beschreibung = $row["beschreibung"];
+      $bild = $row["bild"];
+      $lateinname = $row["lateinname"];
+    }
+  } else {
+    echo '<script>alert("Could not load data from database")</script>';
+    $name= "No data";
+    $beschreibung = "Couldn't load description, please try again later";
+    $bild = "https://assets-v2.lottiefiles.com/a/0e30b444-117c-11ee-9b0d-0fd3804d46cd/A6t16MXhTI.gif";
+    $lateinname = "Nulla notitia";
+  }
+$conn->close();
 ?>
 <body>
     <div class="navbar">
