@@ -205,7 +205,6 @@ $conn->close();
     </div>
 
     <div id="content-container">
-        <!-- Content of the page goes here -->
         <h1 class="titel" >  Bird of the day</h1>
         <div class= "titelbild" >
         <?php
