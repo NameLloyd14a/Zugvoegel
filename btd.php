@@ -208,9 +208,8 @@ $conn->close();
         <h1 class="titel" >  Bird of the day</h1>
         <div class= "titelbild" >
         <?php
-            $bildData = base64_encode(file_get_contents($bild));
             
-            echo '<img src="data:image/jpeg;base64,'.$bildData.'" alt="Hier sollte ein Bild sein">';
+            echo '<img src="'.$bild.'" alt="Hier sollte ein Bild sein">';
             ?>
         <div class="bildtext">
         <div class = "uberschrift"><?php
