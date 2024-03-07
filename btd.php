@@ -73,6 +73,9 @@
 
 
         }
+        .bild{
+            width: 100%;
+        }
 
           
         
@@ -207,10 +210,11 @@ $conn->close();
     <div id="content-container">
         <h1 class="titel" >  Bird of the day</h1>
         <div class= "titelbild" >
-        <?php
+            <div class="bild"><?php
             
-            echo '<img src="'.$bild.'" alt="Hier sollte ein Bild sein">';
-            ?>
+            echo '<img src="'.$bild.'" width="100%" alt="Hier sollte ein Bild sein">';
+            ?></div>
+        
         <div class="bildtext">
         <div class = "uberschrift"><?php
             echo $name;
