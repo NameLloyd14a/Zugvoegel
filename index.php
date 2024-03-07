@@ -180,16 +180,18 @@ $conn->close();
         </div>
     </div>
 
-    <div id="content-container">
-        <!-- Content of the page goes here -->
-        <h1 class="titel" >  brid of to day</h1>
+    <div id="bird-content-container">
+        <h1 class="titel" >Bird of the day</h1>
         <div class= "titelbild">
-          <p><img src= $bild alt="moin meister"></p>
+            <?php
+            $bildData = base64_encode(file_get_contents($bild));
+            echo '<img src="data:image/jpeg;base64,'.$bildData.'" alt="Hier sollte ein Bild sein">';
+            ?>
           <p>text</p>
         </div>
-        
     </div>
 
+   
     <script>
         const funFacts = [
             "Hummingbirds are the only birds that can fly backward.",
