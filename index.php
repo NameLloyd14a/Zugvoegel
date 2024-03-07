@@ -227,13 +227,6 @@ $conn->close();
     </div>
 
     <script>
-        const funFacts = [
-            "Hummingbirds are the only birds that can fly backward.",
-            "Owls can rotate their heads up to 270 degrees.",
-            "The peregrine falcon is the fastest bird and can reach speeds of over 240 mph."
-            // Add more bird facts here
-        ];
-
         function loadHomePage() {
             window.location="index.php";
         }
