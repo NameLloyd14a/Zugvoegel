@@ -45,12 +45,12 @@
             align-items: center;
             margin-top: 10px;
             margin-left: 20px;
-
         }
-        .titelbild{
-          display: flex ;
-          justify-content: center;
-          padding: 20px;
+
+        .titelbild {
+            display: flex;
+            justify-content: center;
+            padding: 20px;
         }
 
         .menu-links {
@@ -63,7 +63,7 @@
         a:hover {
             text-decoration: underline;
             color: aquamarine;
-            margin: left;
+            margin-left: 0; /* Corrected margin value */
         }
 
         .menu {
@@ -106,7 +106,7 @@
         }
 
         #fun-facts-container p {
-            font-size: 24px; /* Increased text size */
+            font-size: 24px;
             margin-top: 20px;
         }
 
@@ -116,9 +116,9 @@
             border: none;
             padding: 15px 20px;
             font-size: 20px;
-            border-radius: 10px; /* Added border-radius for a rounded look */
+            border-radius: 10px;
             cursor: pointer;
-            transition: transform 0.2s ease-in-out; /* Added scaling animation */
+            transition: transform 0.2s ease-in-out;
         }
 
         #next-fact-button:hover {
@@ -126,7 +126,7 @@
         }
 
         #next-fact-button:active {
-            transform: scale(0.95); /* Slight scaling when button is pressed */
+            transform: scale(0.95);
         }
     </style>
 </head>
@@ -149,6 +149,10 @@
         </div>
     </div>
 
+    
+    <div id="content-container">
+        <!-- Content container for Fun Facts -->
+    </div>
     <script>
 
         function loadHomePage() {
@@ -156,7 +160,13 @@
         }
 
         function openContactTab() {
-            window.location="contact.php";
+            document.getElementById("content-container").innerHTML = `
+                <div id="contact-container">
+                    <h1>Contact Us</h1>
+                    <p>If you have any questions, please feel free to reach out to us via email:</p>
+                    <p>Email: <a id="email-link" href="mailto:vogelexperten@gmail.com">vogelexperten@gmail.com</a></p>
+                </div>
+            `;
         }
 
         function openAboutUs() {
@@ -170,6 +180,9 @@
         function openFunFacts() {
             window.location="funfact.php"; 
         }
+
+        openContactTab();
+
     </script>
 </body>
 
