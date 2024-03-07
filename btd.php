@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<<!DOCTYPE html>
 <html>
 <head>
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -39,19 +39,43 @@
         }
         
         .titel{
-            color: black;
-            font-size: 80px;
+            color:black;
+            font-size: 60px;
             font-weight: bold;
-            align-items: center;
-            margin-top: 10px;
-            margin-left: 20px;
+            align-items: baseline;
+            
 
         }
         .titelbild{
           display: flex ;
-          justify-content: center;
-          padding: 20px;
+          justify-content: space-between;
+          align-items: center;
+         
+          background-color: whitesmoke;
+          
+
         }
+        
+        .bildtext {
+          
+          font-size: medium;
+          font-weight: 20px;
+          margin-left: 10px;
+          
+        }
+        .uberschrift{
+          display: flex ;
+          justify-content: left;
+
+          font-size: 25px;
+          font-weight: bold;
+          margin-bottom: 30px;
+
+
+        }
+
+          
+        
 
         .menu-links {
             color: whitesmoke;
@@ -80,7 +104,7 @@
         }
 
         #content-container {
-            margin-top: 60px;
+            margin-top: 20px;
             padding: 20px;
         }
 
@@ -131,7 +155,38 @@
     </style>
 </head>
 <title>Zugvögel</title>
+<?php
+$servername = "localhost:8889";
+$username = "root";
+$password = "root";
+$dbname = "zugvoegel";
 
+// Create connection
+$conn = new mysqli($servername, $username, $password, $dbname);
+// Check connection
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+}
+$day_number = date("d");
+$sql = "SELECT * FROM `vogel` WHERE vgl_id=$day_number;";
+$result = $conn->query($sql);
+if ($result->num_rows > 0) {
+    // output data of each row
+    while($row = $result->fetch_assoc()) {
+      $name= $row["name"];
+      $beschreibung = $row["beschreibung"];
+      $bild = $row["bild"];
+      $lateinname = $row["lateinname"];
+    }
+  } else {
+    echo '<script>alert("Could not load data from database")</script>';
+    $name= "No data";
+    $beschreibung = "Couldn't load description, please try again later";
+    $bild = "https://assets-v2.lottiefiles.com/a/0e30b444-117c-11ee-9b0d-0fd3804d46cd/A6t16MXhTI.gif";
+    $lateinname = "Nulla notitia";
+  }
+$conn->close();
+?>
 <body>
     <div class="navbar">
         <div class="logo">
@@ -149,7 +204,33 @@
         </div>
     </div>
 
+    <div id="content-container">
+        <h1 class="titel" >  Bird of the day</h1>
+        <div class= "titelbild" >
+        <?php
+            $bildData = base64_encode(file_get_contents($bild));
+            
+            echo '<img src="data:image/jpeg;base64,'.$bildData.'" alt="Hier sollte ein Bild sein">';
+            ?>
+        <div class="bildtext">
+        <div class = "uberschrift"><?php
+            echo $name;
+            ?></div>
+            <?php
+            echo $beschreibung;
+            ?>
+
+        </div>
+        
+    </div>
+
     <script>
+        const funFacts = [
+            "Hummingbirds are the only birds that can fly backward.",
+            "Owls can rotate their heads up to 270 degrees.",
+            "The peregrine falcon is the fastest bird and can reach speeds of over 240 mph."
+            // Add more bird facts here
+        ];
 
         function loadHomePage() {
             window.location="index.php";
