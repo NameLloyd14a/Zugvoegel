@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -31,26 +32,27 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
+            padding: 10px 20px;
         }
 
         .headline {
             color: aquamarine;
             font-weight: bold;
         }
-        
-        .titel{
+
+        .titel {
             color: black;
             font-size: 80px;
             font-weight: bold;
             align-items: center;
             margin-top: 10px;
             margin-left: 20px;
-
         }
-        .titelbild{
-          display: flex ;
-          justify-content: center;
-          padding: 20px;
+
+        .titelbild {
+            display: flex;
+            justify-content: center;
+            padding: 20px;
         }
 
         .menu-links {
@@ -60,17 +62,16 @@
             font-size: 24px;
         }
 
-        a:hover {
+        .menu-links:hover {
             text-decoration: underline;
             color: aquamarine;
-            margin: left;
         }
 
         .menu {
             width: 50%;
             display: flex;
             flex-wrap: wrap;
-            justify-content: right;
+            justify-content: flex-end;
             align-items: center;
             font-weight: bold;
         }
@@ -84,29 +85,12 @@
             padding: 20px;
         }
 
-        #contact-container,
         #fun-facts-container {
             text-align: center;
         }
 
-        #contact-container p,
         #fun-facts-container p {
-            font-size: 18px;
-            margin-top: 20px;
-        }
-
-        #email-link {
-            color: #04AA6D;
-            font-weight: bold;
-            text-decoration: none;
-        }
-
-        #email-link:hover {
-            text-decoration: underline;
-        }
-
-        #fun-facts-container p {
-            font-size: 24px; /* Increased text size */
+            font-size: 24px;
             margin-top: 20px;
         }
 
@@ -116,9 +100,9 @@
             border: none;
             padding: 15px 20px;
             font-size: 20px;
-            border-radius: 10px; /* Added border-radius for a rounded look */
+            border-radius: 10px;
             cursor: pointer;
-            transition: transform 0.2s ease-in-out; /* Added scaling animation */
+            transition: transform 0.2s ease-in-out;
         }
 
         #next-fact-button:hover {
@@ -126,10 +110,11 @@
         }
 
         #next-fact-button:active {
-            transform: scale(0.95); /* Slight scaling when button is pressed */
+            transform: scale(0.95);
         }
     </style>
 </head>
+
 <title>Zugvögel</title>
 
 <body>
@@ -149,6 +134,10 @@
         </div>
     </div>
 
+    <div id="content-container">
+        <!-- Content container for Fun Facts -->
+    </div>
+
     <script>
         const funFacts = [
             "Hummingbirds are the only birds that can fly backward.",
@@ -156,37 +145,38 @@
             "The peregrine falcon is the fastest bird and can reach speeds of over 240 mph."
             // Add more bird facts here
         ];
+
         function loadHomePage() {
-            window.location="index.php";
+            window.location = "index.php";
         }
 
         function openContactTab() {
-            window.location="contact.php";
+            window.location = "contact.php";
         }
 
         function openAboutUs() {
-            window.location="about.php";
+            window.location = "about.php";
         }
 
         function openPlaces() {
-            window.location="places.php";
+            window.location = "places.php";
         }
 
-        function openFunFacts() {
-            window.location="funfact.php"; 
-        }
+        function displayRandomFunFact() {
             const randomFactIndex = Math.floor(Math.random() * funFacts.length);
-                const randomFunFact = funFacts[randomFactIndex];
-    
-                document.getElementById("content-container").innerHTML = `
-                    <div id="fun-facts-container">
-                        <h1>Fun Facts</h1>
-                        <p>${randomFunFact}</p>
-                        <button id="next-fact-button" onclick="openFunFacts()">Next Fact</button>
-                    </div>
-                    `;
-                
-        
+            const randomFunFact = funFacts[randomFactIndex];
+
+            document.getElementById("content-container").innerHTML = `
+                <div id="fun-facts-container">
+                    <h1>Fun Facts</h1>
+                    <p>${randomFunFact}</p>
+                    <button id="next-fact-button" onclick="displayRandomFunFact()">Next Fact</button>
+                </div>
+            `;
+        }
+
+        // Initial display of a random fun fact
+        displayRandomFunFact();
     </script>
 </body>
 
