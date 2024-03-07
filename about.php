@@ -148,6 +148,10 @@
             <a class="menu-links" href="#" onclick="openFunFacts()">Fun Facts</a>
         </div>
     </div>
+    
+    <div id="content-container">
+        <!-- Content container for Fun Facts -->
+    </div>
 
     <script>
 
@@ -162,9 +166,9 @@
         function openAboutUs() {
             document.getElementById("content-container").innerHTML = `
                 <div id="contact-container">
-                    <h1>Contact Us</h1>
-                    <p>If you have any questions, please feel free to reach out to us via email:</p>
-                    <p>Email: <a id="email-link" href="mailto:vogelexperten@gmail.com">vogelexperten@gmail.com</a></p>
+                    <h1>Das ist unser Team.</h1>
+                    <p>Wir sind ein Junges un engagiertes Team. </p>
+                    <p>Leon Mischa Lukas</p>
                 </div>
             `;
 
@@ -181,5 +185,3 @@
         openAboutUs();
     </script>
 </body>
-
-</html>

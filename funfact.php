@@ -140,10 +140,38 @@
 
     <script>
         const funFacts = [
-            "Hummingbirds are the only birds that can fly backward.",
-            "Owls can rotate their heads up to 270 degrees.",
-            "The peregrine falcon is the fastest bird and can reach speeds of over 240 mph."
-            // Add more bird facts here
+    "Papageien können Wörter nachahmen und menschliche Sprache lernen.",
+    "Kolibris sind die einzigen Vögel, die rückwärts fliegen können.",
+    "Eulen können ihre Köpfe um bis zu 270 Grad drehen.",
+    "Der Wanderfalke ist der schnellste Vogel und kann Geschwindigkeiten von über 240 mph erreichen.",
+    "Flamingos werden rosa, weil sie Krebstiere essen.",
+    "Kakadus sind für ihre lauten Rufe und ihre sozialen Fähigkeiten bekannt.",
+    "Singvögel können komplexe Lieder lernen und nachahmen.",
+    "Kiwis sind flugunfähige Vögel, die in Neuseeland beheimatet sind.",
+    "Der Strauß ist der größte flugunfähige Vogel und kann nicht fliegen.",
+    "Der Pfau ist für sein prächtiges Federkleid und seine imposante Federpracht bekannt.",
+    "Der Pelikan hat einen großen Schnabel und eine dehnbare Kehltasche zum Fischen.",
+    "Amseln sind dafür bekannt, melodische Gesänge zu haben.",
+    "Falken haben scharfe Augen und sind geschickte Jäger.",
+    "Der Star kann eine Vielzahl von Geräuschen und Melodien nachahmen.",
+    "Kraniche sind für ihre beeindruckenden Wanderungen bekannt.",
+    "Elstern sind neugierige Vögel und können verschiedene Gegenstände sammeln.",
+    "Der Pirol hat ein lebhaft gelbes Gefieder und einen melodischen Gesang.",
+    "Habichte sind schnelle Greifvögel, die geschickt jagen.",
+    "Kolkraben sind intelligente Vögel und können Werkzeuge verwenden.",
+    "Sperlinge sind häufige Stadtbewohner und geschickte Nestbauer.",
+    "Der Wiedehopf hat eine auffällige Federhaube und einen charakteristischen Ruf.",
+    "Schwalben sind bekannt für ihre eleganten Flugmanöver.",
+    "Möwen sind geschickte Flieger und leben oft in Küstengebieten.",
+    "Wellensittiche sind beliebte Haustiere und können einfache Wörter lernen.",
+    "Der Zaunkönig ist einer der kleinsten Vögel und hat einen lauten Gesang.",
+    "Raben gelten als klug und können komplexe Probleme lösen.",
+    "Fasane haben auffällige Federkleider und werden oft für die Jagd gezüchtet.",
+    "Wachteln sind bodenbewohnende Vögel und haben einen schnellen Flug.",
+    "Seeadler sind majestätische Greifvögel und stehen für Stärke.",
+    "Nachtigallen sind für ihren melodischen Gesang in der Dämmerung bekannt."
+
+
         ];
 
         function loadHomePage() {
