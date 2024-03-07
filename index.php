@@ -37,6 +37,21 @@
             color: aquamarine;
             font-weight: bold;
         }
+        
+        .titel{
+            color: black;
+            font-size: 80px;
+            font-weight: bold;
+            align-items: center;
+            margin-top: 10px;
+            margin-left: 20px;
+
+        }
+        .titelbild{
+          display: flex ;
+          justify-content: center;
+          padding: 20px;
+        }
 
         .menu-links {
             color: whitesmoke;
@@ -167,8 +182,12 @@ $conn->close();
 
     <div id="content-container">
         <!-- Content of the page goes here -->
-        <h1>Welcome to Our Website!</h1>
-        <p>This is the home page content.</p>
+        <h1 class="titel" >  brid of to day</h1>
+        <div class= "titelbild">
+          <p><img src= $bild alt="moin meister"></p>
+          <p>text</p>
+        </div>
+        
     </div>
 
     <script>
