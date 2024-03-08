@@ -157,7 +157,7 @@
         }
     </style>
 </head>
-<title>Zugvögel</title>
+<title>Bird of the day</title>
 <?php
 $servername = "localhost:8889";
 $username = "root";
@@ -174,19 +174,27 @@ $day_number = date("d");
 $sql = "SELECT * FROM `vogel` WHERE vgl_id=$day_number;";
 $result = $conn->query($sql);
 if ($result->num_rows > 0) {
-    // output data of each row
+    // load data from database into variables
     while($row = $result->fetch_assoc()) {
       $name= $row["name"];
       $beschreibung = $row["beschreibung"];
       $bild = $row["bild"];
       $lateinname = $row["lateinname"];
+      $lebenserwartung = $row["lebenserwartung"]; //in Jahren
+      $gewicht = $row["gewicht"]; //gewicht in g
+      $groesse = $row["groesse"]; //grösse in cm
+      $mahlzeit = $row["mahlzeit"];
     }
-  } else {
+  } else { //load the no data alerts if there is no data available
     echo '<script>alert("Could not load data from database")</script>';
     $name= "No data";
     $beschreibung = "Couldn't load description, please try again later";
     $bild = "https://assets-v2.lottiefiles.com/a/0e30b444-117c-11ee-9b0d-0fd3804d46cd/A6t16MXhTI.gif";
     $lateinname = "Nulla notitia";
+    $lebenserwartung = "unbekannt";
+    $gewicht = "unbekannt";
+    $groesse = "unbekannt";
+    $mahlzeit = "unbekannt";
   }
 $conn->close();
 ?>
