@@ -55,70 +55,6 @@
             padding: 20px;
         }
 
-        .img_neracher {
-            width: 49%;
-            float: left;
-            margin-right: 2%;
-            margin-bottom: 2%;
-            overflow: hidden; 
-        }
-
-
-        .img_Baumwipfelpfad {
-            width: 49%;
-            float: left;
-            overflow: hidden;
-        }
-
-        .img_Vogelwarte_sempach_jpg {
-            width: 60%;
-            float: left;
-            overflow: hidden;
-            margin-right: 2%;
-            margin-bottom: 2%;
-        }
-
-        .img_LeBollediMagadino {
-            width: 38%;
-            float: right;
-            overflow: hidden;
-            margin-bottom: 2%;
-        }
-
-        .img_Bachalpsee {
-            width: 38%;
-            float: right;
-            overflow: hidden;
-        }
-
-
-        .img_OeschineseeRundweg {
-            width: 60%;
-            float: left;
-            overflow: hidden;
-        }
-
-        .img_OeschineseeRundweg:hover img,
-        .img_Bachalpsee:hover img,
-        .img_neracher:hover img,
-        .img_Baumwipfelpfad:hover img,
-        .img_Vogelwarte_sempach_jpg:hover img,
-        .img_LeBollediMagadino:hover img {
-            transform: scale(1.1);
-        }
-
-        .img_OeschineseeRundweg img,
-        .img_Bachalpsee img,
-        .img_neracher img,
-        .img_Baumwipfelpfad img,
-        .img_Vogelwarte_sempach_jpg img,
-        .img_LeBollediMagadino img {
-            width: 100%;
-            height: auto;
-            transition: transform 0.3s ease;
-        }
-
-
         .menu-links {
             color: whitesmoke;
             text-decoration: none;
@@ -215,27 +151,64 @@
         </div>
     </div>
 
-
-    <div class='img_neracher' onclick='openplacesneracher()'>
-        <img src='birdlife-naturzentrum-neeracherried-ausflugsziel-buehnenbild1.jpg'> 
+    <div id="content-container">
+        <!-- Content container for Fun Facts -->
     </div>
 
+    <div class="titelbild">
+        <video autoplay controls width="70%">
+            <source src="Video.mp4" type="video/mp4">
+        </video>
+    </div>
+    <style>
+        .container {
+            background-color: gray; 
+            height : 50%px;
+            width : 67%;
+            display: flex;
+            justify-content: center;
 
-    <div class='img_Baumwipfelpfad'>
-        <img src='Baumwipfelpfad.jpg'> 
-    </div>
+            position: absolute;
+            top: 1050px;
+            left: 50%;
+            transform : translate(-50%, -50%);
 
-    <div class='img_Vogelwarte_sempach_jpg'>
-        <img src='Vogelwarte_Sempach.jpg'> 
-    </div>
-    <div class='img_LeBollediMagadino'>
-        <img src='Le Bolle di Magadino.jpg'> 
-    </div>
-    <div class='img_Bachalpsee'>
-        <img src='Bachalpsee.jpg'> 
-    </div>
-    <div class='img_OeschineseeRundweg'>
-        <img src='Oeschinensee Rundweg.jpg'> 
+        }
+        p{
+            color: white;
+            font-family: sans-serif;
+        }
+    </style>
+
+    <h1 style='text-align : center;' >Ein Jahr im Neeracherried</h1>
+    
+    <div class='container'>
+
+        <p style= 'text-align : center;'> Das BirdLife-Naturzentrum Neeracherried liegt am Rand eines der letzten grossen Flachmoore der Schweiz. Dank einem Steg ins Ried und zwei Beobachtungshütten lässt sich die vielfältige Natur – speziell Vögel – hautnah erleben: Im Ried brüten Kiebitz, Eisvogel und Lachmöwe, und hier rasten Zugvögel wie Grünschenkel oder Silberreiher.
+        Im Gebäude gibt es eine interaktive Ausstellung zum Lebensraum Ried, die auch für Kinder geeignet ist. Eine Videoschau, zwei Naturpfade und Sonderausstellungen - aktuell zu "Geheimnisvolle Unterwasserwelt" mit lebendigen Kleintieren in Aquarien – runden das attraktive Angebot ab.
+        Das BirdLife-Naturzentrum Neeracherried ist nicht nur für Einzelbesucher offen, sondern auch für alle Arten von Gruppen, von Familien über Vereine, und Firmen bis zu Verwaltungen. Für Schulen gibt es spezielle Materialien.
+
+        Ihr Anlass
+        Firmenausflug mit Apéro, Familienfest mit Führung in die Natur, Hochzeits-Überraschungsausflug: Dies alles ist im BirdLife-Naturzentrum möglich. Wir beraten Sie gerne.
+
+        Schulen und Kinder
+        Schulklassen jeden Alters, Lehrerkollegien und Kindergruppen sind im BirdLife-Naturzentrum Neeracherried speziell willkommen. Wir veranstalten stufengerechte Führungen vom Kindergarten- bis zum Universitätsniveau. Für alle Schulstufen (Unterstufe, Mittelstufe, Oberstufe, Kantonsschule Oberstufe) gibt es auf der Webpage ein umfangreiches Vor- und Nachbereitungsdossier für die Führung im Neeracherried. Die wichtigsten Themen sind Vögel und Vogelzug, Kleintiere im Teich sowie Naturschutz - wir passen das Programm gerne den spezifischen Voraussetzungen der Gruppen an.
+
+        Öffnungszeiten
+        April bis Oktober
+        Mi 14–20 Uhr
+        Sa 10–18 Uhr
+        So und Feiertage 8–18 Uhr
+
+        November bis März
+        2. Sonntag des Monats 9–16 Uhr
+
+        Kontakt:
+        BirdLife-Naturzentrum Neeracherried
+        Dielsdorferstrasse 13, Postfach
+        8173 Neerach
+        Tel. 044 858 13 00
+        birdlife.ch/naturzentrum-neeracherried</p>
     </div>
 
     <script>
@@ -251,11 +224,9 @@
         function openAboutUs() {
             window.location="about.php";
         }
-        function openplaces() {
+
+        function openPlaces() {
             window.location="places.php"
-        }
-        function openplacesneracher() {
-            window.location="placesneracher.php"
         }
 
         function openFunFacts() {
