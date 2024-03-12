@@ -56,6 +56,7 @@
         }
 
         .img_neracher {
+            position: relative;
             width: 49%;
             float: left;
             margin-right: 2%;
@@ -69,6 +70,7 @@
             float: right;
             overflow: hidden;
         }
+
 
         .img_Vogelwarte_sempach_jpg {
             width: 60%;
@@ -89,6 +91,7 @@
             width: 38%;
             float: right;
             overflow: hidden;
+            margin-bottom:2%;
         }
 
 
@@ -99,7 +102,7 @@
         }
 
         .img_Klingnauer_Stausee {
-            width: 30%;
+            width: 38%;
             float: right;
             overflow: hidden;
         }
@@ -126,21 +129,49 @@
             transition: transform 0.3s ease;
         }
 
-        .nerachercontent{
-            width:100%;
-            height:100%;
-            top:0;
-            left:0;
-            position:absolute;
-            justify-content:center;
-            align-items:center;
-            flex-direction:column;
-            opacity:0;
-            transition:0.6s;
+
+        .image-container {
+            position: relative;
         }
-        .nerachercontent{
-            opacity:1;
+
+        .image-container img {
+            width: 100%;
+            height: auto;
+            transition: transform 0.3s ease;
         }
+
+        .nerachertext,
+        .baumwipfelpfadtext,
+        .vogelwartetext,
+        .bolleditext,
+        .bachalpseetext,
+        .oeschinenseetext,
+        .klingnauertext {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 100%;
+            background-color: rgba(0, 0, 0, 0.5); 
+            color: whitesmoke;
+            text-align: center;
+            padding: 100%; 
+            opacity: 0; 
+            transition: opacity 0.3s ease-in-out;
+            font-size: 50px;
+        }
+
+        .img_neracher:hover .image-container .nerachertext,
+        .img_Baumwipfelpfad:hover .image-container .baumwipfelpfadtext,
+        .img_Vogelwarte_sempach_jpg:hover .image-container .vogelwartetext,
+        .img_LeBollediMagadino:hover .image-container .bolleditext,
+        .img_Bachalpsee:hover .image-container .bachalpseetext,
+        .img_OeschineseeRundweg:hover .image-container .oeschinenseetext,
+        .img_Klingnauer_Stausee:hover .image-container .klingnauertext {
+            opacity: 1; 
+        }
+
+
         .menu-links {
             color: whitesmoke;
             text-decoration: none;
@@ -238,31 +269,54 @@
     </div>
 
 
+
     <div class='img_neracher' onclick='openplacesneracher()'>
+    <div class="image-container">
         <img src='birdlife-naturzentrum-neeracherried-ausflugsziel-buehnenbild1.jpg'> 
-        <div class='nerachercontent'>
-            <h1> Neeracheried</h1>
+        <div class="nerachertext">Neeracherried</div>
+    </div>
     </div>
 
-
-    <div class='img_Baumwipfelpfad'>
-        <img src='Baumwipfelpfad.jpg'> 
+    <div class='img_Baumwipfelpfad' onclick='openplacesbaumwipfelpfad()'>
+        <div class="image-container">
+            <img src='Baumwipfelpfad.jpg'> 
+            <div class="baumwipfelpfadtext">Baumwipfelpfad</div>
+        </div>
     </div>
 
-    <div class='img_Vogelwarte_sempach_jpg'>
-        <img src='Vogelwarte_Sempach.jpg'> 
+    <div class='img_Vogelwarte_sempach_jpg' onclick='openplacesvogelwarte()'>
+        <div class="image-container">
+            <img src='Vogelwarte_Sempach.jpg'> 
+            <div class="vogelwartetext">Vogelwarte Sempach</div>
+        </div>
     </div>
-    <div class='img_LeBollediMagadino'>
-        <img src='Le Bolle di Magadino.jpg'> 
+
+    <div class='img_LeBollediMagadino' onclick='openplacesbolledi()'>
+        <div class="image-container">
+            <img src='Le Bolle di Magadino.jpg'> 
+            <div class="bolleditext">Le Bolle di Magadino</div>
+        </div>
     </div>
-    <div class='img_Bachalpsee'>
-        <img src='Bachalpsee.jpg'> 
+
+    <div class='img_Bachalpsee' onclick='openplacesbachalpsee()'>
+        <div class="image-container">
+            <img src='Bachalpsee.jpg'> 
+            <div class="bachalpseetext">Bachalpsee</div>
+        </div>
     </div>
-    <div class='img_OeschineseeRundweg'>
-        <img src='Oeschinensee Rundweg.jpg'> 
+
+    <div class='img_OeschineseeRundweg' onclick='openplacesoeschinensee()'>
+        <div class="image-container">
+            <img src='Oeschinensee Rundweg.jpg'> 
+            <div class="oeschinenseetext">Oeschinensee Rundweg</div>
+        </div>
     </div>
-    <div class='img_Klingnauer_Stausee'>
-        <img src='Klingnauer Stausee.jpg'> 
+
+    <div class='img_Klingnauer_Stausee' onclick='openplacesklingnauer()'>
+        <div class="image-container">
+            <img src='Klingnauer Stausee.jpg'> 
+            <div class="klingnauertext">Klingnauer Stausee</div>
+        </div>
     </div>
 
     <script>
