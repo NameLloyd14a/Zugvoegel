@@ -196,7 +196,7 @@
                 <div id="fun-facts-container">
                     <h1>Fun Facts</h1>
                     <p>${randomFunFact}</p>
-                    <button id="next-fact-button" onclick="displayRandomFunFact()">Next Fact</button>
+                    <button id="next-fact-button" onclick="displayRandomFunFact()">Nächster Fakt/button>
                 </div>
             `;
         }
