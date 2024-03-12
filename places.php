@@ -66,7 +66,7 @@
 
         .img_Baumwipfelpfad {
             width: 49%;
-            float: left;
+            float: right;
             overflow: hidden;
         }
 
@@ -98,6 +98,13 @@
             overflow: hidden;
         }
 
+        .img_Klingnauer_Stausee {
+            width: 30%;
+            float: right;
+            overflow: hidden;
+        }
+
+        .img_Klingnauer_Stausee:hover img,
         .img_OeschineseeRundweg:hover img,
         .img_Bachalpsee:hover img,
         .img_neracher:hover img,
@@ -107,6 +114,7 @@
             transform: scale(1.1);
         }
 
+        .img_Klingnauer_Stausee img,
         .img_OeschineseeRundweg img,
         .img_Bachalpsee img,
         .img_neracher img,
@@ -118,7 +126,21 @@
             transition: transform 0.3s ease;
         }
 
-
+        .nerachercontent{
+            width:100%;
+            height:100%;
+            top:0;
+            left:0;
+            position:absolute;
+            justify-content:center;
+            align-items:center;
+            flex-direction:column;
+            opacity:0;
+            transition:0.6s;
+        }
+        .nerachercontent{
+            opacity:1;
+        }
         .menu-links {
             color: whitesmoke;
             text-decoration: none;
@@ -218,6 +240,8 @@
 
     <div class='img_neracher' onclick='openplacesneracher()'>
         <img src='birdlife-naturzentrum-neeracherried-ausflugsziel-buehnenbild1.jpg'> 
+        <div class='nerachercontent'>
+            <h1> Neeracheried</h1>
     </div>
 
 
@@ -236,6 +260,9 @@
     </div>
     <div class='img_OeschineseeRundweg'>
         <img src='Oeschinensee Rundweg.jpg'> 
+    </div>
+    <div class='img_Klingnauer_Stausee'>
+        <img src='Klingnauer Stausee.jpg'> 
     </div>
 
     <script>
