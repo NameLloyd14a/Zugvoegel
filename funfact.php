@@ -121,7 +121,7 @@
     <div class="navbar">
         <div class="logo">
             <div>
-                <img class="image" src="website_logo.png" alt="Logo" onclick="loadHomePage()">
+                <img class="image" src="Bilder/website_logo.png" alt="Logo" onclick="loadHomePage()">
             </div>
             <h1 class="headline">Zugvögel</h1>
         </div>
@@ -196,7 +196,7 @@
                 <div id="fun-facts-container">
                     <h1>Fun Facts</h1>
                     <p>${randomFunFact}</p>
-                    <button id="next-fact-button" onclick="displayRandomFunFact()">Nächster Fakt/button>
+                    <button id="next-fact-button" onclick="displayRandomFunFact()">Nächster Fakt</button>
                 </div>
             `;
         }

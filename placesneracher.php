@@ -68,12 +68,12 @@
             display: flex;
             justify-content: center;
             padding: 20px;
-            margin-top:800px;
+            margin-top:900px;
         }
 
         p {
-            color: black
-            font-family: sans-serif;
+            color: black;
+            font-family: "Open Sans", sans-serif;
         }
 
         .menu-links {
@@ -159,7 +159,7 @@
     <div class="navbar">
         <div class="logo">
             <div>
-                <img class="image" src="website_logo.png" alt="Logo" onclick="loadHomePage()">
+                <img class="image" src="Bilder/website_logo.png" alt="Logo" onclick="loadHomePage()">
             </div>
             <h1 class="headline">Zugvögel</h1>
         </div>
@@ -175,7 +175,7 @@
     <h1 class='titel' style='text-align : center;' font-size: 30px; >Neeracherried</h1>
 
     <div class='container'>
-    <p style= 'text-align : left;'> Das BirdLife-Naturzentrum Neeracherried liegt am Rand eines der letzten grossen Flachmoore der Schweiz. Dank einem Steg ins Ried und zwei Beobachtungshütten lässt sich die vielfältige Natur – speziell Vögel – hautnah erleben: Im Ried brüten Kiebitz, Eisvogel und Lachmöwe, und hier rasten Zugvögel wie Grünschenkel oder Silberreiher.
+    <p style= 'text-align : left;'> <br>Das BirdLife-Naturzentrum Neeracherried liegt am Rand eines der letzten grossen Flachmoore der Schweiz. Dank einem Steg ins Ried und zwei Beobachtungshütten lässt sich die vielfältige Natur – speziell Vögel – hautnah erleben: Im Ried brüten Kiebitz, Eisvogel und Lachmöwe, und hier rasten Zugvögel wie Grünschenkel oder Silberreiher.
         Im Gebäude gibt es eine interaktive Ausstellung zum Lebensraum Ried, die auch für Kinder geeignet ist. Eine Videoschau, zwei Naturpfade und Sonderausstellungen - aktuell zu "Geheimnisvolle Unterwasserwelt" mit lebendigen Kleintieren in Aquarien – runden das attraktive Angebot ab.
         Das BirdLife-Naturzentrum Neeracherried ist nicht nur für Einzelbesucher offen, sondern auch für alle Arten von Gruppen, von Familien über Vereine, und Firmen bis zu Verwaltungen. Für Schulen gibt es spezielle Materialien.
         <br><br><br>
@@ -195,17 +195,17 @@
         2. Sonntag des Monats 9–16 Uhr
         <br><br><br>
         Kontakt:
-        BirdLife-Naturzentrum Neeracherried
-        Dielsdorferstrasse 13, Postfach
-        8173 Neerach
-        Tel. 044 858 13 00
-        birdlife.ch/naturzentrum-neeracherried</p>
+        BirdLife-Naturzentrum Neeracherried<br>
+        Dielsdorferstrasse 13<br>
+        8173 Neerach<br>
+        Tel. 044 858 13 00<br>
+        <a href="birdlife.ch/naturzentrum-neeracherried">Website</a></p>
     </div>
 
 
         <div class="titelbild">
             <video autoplay controls width="70%">
-                <source src="Video.mp4" type="video/mp4">
+                <source src="Bilder/Video.mp4" type="video/mp4">
             </video>
         </div>
     </div>

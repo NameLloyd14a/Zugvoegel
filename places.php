@@ -255,7 +255,7 @@
     <div class="navbar">
         <div class="logo">
             <div>
-                <img class="image" src="website_logo.png" alt="Logo" onclick="loadHomePage()">
+                <img class="image" src="Bilder/website_logo.png" alt="Logo" onclick="loadHomePage()">
             </div>
             <h1 class="headline">Zugvögel</h1>
         </div>
@@ -272,49 +272,49 @@
 
     <div class='img_neracher' onclick='openplacesneracher()'>
     <div class="image-container">
-        <img src='birdlife-naturzentrum-neeracherried-ausflugsziel-buehnenbild1.jpg'> 
+        <img src='Bilder/birdlife-naturzentrum-neeracherried-ausflugsziel-buehnenbild1.jpg'> 
         <div class="nerachertext">Neeracherried</div>
     </div>
     </div>
 
     <div class='img_Baumwipfelpfad' onclick='openplacesbaumwipfelpfad()'>
         <div class="image-container">
-            <img src='Baumwipfelpfad.jpg'> 
+            <img src='Bilder/Baumwipfelpfad.jpg'> 
             <div class="baumwipfelpfadtext">Baumwipfelpfad</div>
         </div>
     </div>
 
     <div class='img_Vogelwarte_sempach_jpg' onclick='openplacesvogelwarte()'>
         <div class="image-container">
-            <img src='Vogelwarte_Sempach.jpg'> 
+            <img src='Bilder/Vogelwarte_Sempach.jpg'> 
             <div class="vogelwartetext">Vogelwarte Sempach</div>
         </div>
     </div>
 
     <div class='img_LeBollediMagadino' onclick='openplacesbolledi()'>
         <div class="image-container">
-            <img src='Le Bolle di Magadino.jpg'> 
+            <img src='Bilder/Le Bolle di Magadino.jpg'> 
             <div class="bolleditext">Le Bolle di Magadino</div>
         </div>
     </div>
 
     <div class='img_Bachalpsee' onclick='openplacesbachalpsee()'>
         <div class="image-container">
-            <img src='Bachalpsee.jpg'> 
+            <img src='Bilder/Bachalpsee.jpg'> 
             <div class="bachalpseetext">Bachalpsee</div>
         </div>
     </div>
 
     <div class='img_OeschineseeRundweg' onclick='openplacesoeschinensee()'>
         <div class="image-container">
-            <img src='Oeschinensee Rundweg.jpg'> 
+            <img src='Bilder/Oeschinensee Rundweg.jpg'> 
             <div class="oeschinenseetext">Oeschinensee Rundweg</div>
         </div>
     </div>
 
     <div class='img_Klingnauer_Stausee' onclick='openplacesklingnauer()'>
         <div class="image-container">
-            <img src='Klingnauer Stausee.jpg'> 
+            <img src='Bilder/Klingnauer Stausee.jpg'> 
             <div class="klingnauertext">Klingnauer Stausee</div>
         </div>
     </div>
