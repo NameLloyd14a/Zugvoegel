@@ -199,7 +199,7 @@
         Dielsdorferstrasse 13<br>
         8173 Neerach<br>
         Tel. 044 858 13 00<br>
-        <a href="birdlife.ch/naturzentrum-neeracherried">Website</a></p>
+        <a href="https://www.birdlife.ch/de/content/naturzentrum-neeracherried">Website</a></p>
     </div>
 
 
