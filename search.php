@@ -13,9 +13,7 @@
 
         .image {
             width: 70%
-            
         }
-
 
         .logo {
             display: flex;
@@ -33,8 +31,6 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            border-radius: 5px 5px 5px 5px;
-            overflow: hidden;
         }
 
         .headline {
@@ -89,12 +85,6 @@
         }
 
         a:hover {
-            text-decoration: underline;
-            color: aquamarine;
-            margin: left;
-        }
-
-        table.tabelle tbody tr th:hover{
             text-decoration: underline;
             color: aquamarine;
             margin: left;
@@ -162,33 +152,70 @@
         #next-fact-button:active {
             transform: scale(0.95); /* Slight scaling when button is pressed */
         }
-        .tabelle {
-            border-collapse: collapse;
-            margin-top: 20px;
-            
-            border-radius: 5px;
-            overflow: hidden;
-
-
+        .container {
+        height: 100%;
         }
-        table.tabelle thead tr {
-            background-color: black;
-            font-size: 15px;
-            color: aquamarine;
-            font-weight: bold;
-            text-align: left;
 
+        a {
+        color: inherit;
         }
-        table.tabelle th, table.tabelle td {
-            padding : 12px 16px ;
+        a:hover {
+        color: #7f8ff4;
+        }
 
+        .container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
         }
-        table.tabelle tbody tr {
-            background-color: gray;
-            color: white ;
-            text-align: left;
-            font-size: 10px;
-            
+
+        .uppercase {
+        text-transform: uppercase;
+        }
+
+        .btn {
+        display: inline-block;
+        background: transparent;
+        color: inherit;
+        font: inherit;
+        border: 0;
+        outline: 0;
+        padding: 0;
+        transition: all 200ms ease-in;
+        cursor: pointer;
+        }
+
+        .btn--primary {
+        background: #7f8ff4;
+        color: #fff;
+        box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.1);
+        border-radius: 2px;
+        padding: 12px 36px;
+        }
+
+        .btn--primary:hover {
+        background: #6c7ff2;
+        }
+
+        .btn--primary:active {
+        background: #7f8ff4;
+        box-shadow: inset 0 0 10px 2px rgba(0, 0, 0, 0.2);
+        }
+
+        .btn--inside {
+        margin-left: -96px;
+        }
+
+        .form__field {
+        width: 360px;
+        background: #fff;
+        color: #a3a3a3;
+        font: inherit;
+        box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.1);
+        border: 0;
+        outline: 0;
+        padding: 22px 18px;
         }
     </style>
 </head>
@@ -215,10 +242,6 @@ if ($result->num_rows > 0) {
       $beschreibung = $row["beschreibung"];
       $bild = $row["bild"];
       $lateinname = $row["lateinname"];
-      $lebenserwartung = $row["lebenserwartung"]; //in Jahren
-      $gewicht = $row["gewicht"]; //gewicht in g
-      $groesse = $row["groesse"]; //grösse in cm
-      $mahlzeit = $row["mahlzeit"];
     }
   } else {
     echo '<script>alert("Could not load data from database")</script>';
@@ -226,10 +249,6 @@ if ($result->num_rows > 0) {
     $beschreibung = "Couldn't load description, please try again later";
     $bild = "https://assets-v2.lottiefiles.com/a/0e30b444-117c-11ee-9b0d-0fd3804d46cd/A6t16MXhTI.gif";
     $lateinname = "Nulla notitia";
-    $lebenserwartung = "unbekannt";
-    $gewicht = "unbekannt";
-    $groesse = "unbekannt";
-    $mahlzeit = "unbekannt";
   }
 $conn->close();
 ?>
@@ -250,50 +269,17 @@ $conn->close();
         </div>
     </div>
 
-    <div id="content-container">
-        <h1 class="titel" >Bird of the day</h1>
-        <div class= "titelbild" >
-        <?php
-            
-            
-            echo '<img src="'.$bild.'" alt="Hier sollte ein Bild sein">';
-            ?>
-        <div class="bildtext">
-        <div class = "uberschrift"><?php
-            echo $name;
-            ?></div>
-            <?php
-            echo $beschreibung;
-            ?>
-
+    <div class="container">
+        <div class="container__item">
+            <form class="form">
+                <input type="email" class="form__field" placeholder="Your E-Mail Address" />
+                <button type="button" class="btn btn--primary btn--inside uppercase">Send</button>
+            </form>
         </div>
-        
     </div>
-    <table class="tabelle", width: 410px;>
-        <thead>
-            <tr>
-                <th> Name </th>
-                <th> Grösse (cm) </th>
-                <th> Gewicht (g)</th>
-                <th> Lebenserwartung (Jahre) </th>
-                <th> Lebensraum</th>
-                <th>Ernährung</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <th><?php echo $name;?></th>
-                <th><?php echo $groesse;?></th>
-                <th><?php echo $gewicht;?></th>
-                <th><?php echo $lebenserwartung;?></th>
-                <th><?php echo $Lebensraum;?></th>
-                <th><?php echo $mahlzeit;?></th>
-
-            </tr>
-        </tbody>
-    </table>
-
+    </form>
     <script>
+
         function loadHomePage() {
             window.location="index.php";
         }
@@ -315,4 +301,5 @@ $conn->close();
         }
     </script>
 </body>
+
 </html>

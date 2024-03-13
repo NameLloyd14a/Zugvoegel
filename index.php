@@ -13,9 +13,7 @@
 
         .image {
             width: 70%
-            
         }
-
 
         .logo {
             display: flex;
@@ -33,8 +31,6 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            border-radius: 5px 5px 5px 5px;
-            overflow: hidden;
         }
 
         .headline {
@@ -77,6 +73,9 @@
 
 
         }
+        .bild{
+            width: 100%;
+        }
 
           
         
@@ -89,12 +88,6 @@
         }
 
         a:hover {
-            text-decoration: underline;
-            color: aquamarine;
-            margin: left;
-        }
-
-        table.tabelle tbody tr th:hover{
             text-decoration: underline;
             color: aquamarine;
             margin: left;
@@ -162,37 +155,9 @@
         #next-fact-button:active {
             transform: scale(0.95); /* Slight scaling when button is pressed */
         }
-        .tabelle {
-            border-collapse: collapse;
-            margin-top: 20px;
-            
-            border-radius: 5px;
-            overflow: hidden;
-
-
-        }
-        table.tabelle thead tr {
-            background-color: black;
-            font-size: 15px;
-            color: aquamarine;
-            font-weight: bold;
-            text-align: left;
-
-        }
-        table.tabelle th, table.tabelle td {
-            padding : 12px 16px ;
-
-        }
-        table.tabelle tbody tr {
-            background-color: gray;
-            color: white ;
-            text-align: left;
-            font-size: 10px;
-            
-        }
     </style>
 </head>
-<title>Zugvögel</title>
+<title>Bird of the day</title>
 <?php
 $servername = "localhost:8889";
 $username = "root";
@@ -209,19 +174,27 @@ $day_number = date("d");
 $sql = "SELECT * FROM `vogel` WHERE vgl_id=$day_number;";
 $result = $conn->query($sql);
 if ($result->num_rows > 0) {
-    // output data of each row
+    // load data from database into variables
     while($row = $result->fetch_assoc()) {
       $name= $row["name"];
       $beschreibung = $row["beschreibung"];
       $bild = $row["bild"];
       $lateinname = $row["lateinname"];
+      $lebenserwartung = $row["lebenserwartung"]; //in Jahren
+      $gewicht = $row["gewicht"]; //gewicht in g
+      $groesse = $row["groesse"]; //grösse in cm
+      $mahlzeit = $row["mahlzeit"];
     }
-  } else {
+  } else { //load the no data alerts if there is no data available
     echo '<script>alert("Could not load data from database")</script>';
     $name= "No data";
     $beschreibung = "Couldn't load description, please try again later";
     $bild = "https://assets-v2.lottiefiles.com/a/0e30b444-117c-11ee-9b0d-0fd3804d46cd/A6t16MXhTI.gif";
     $lateinname = "Nulla notitia";
+    $lebenserwartung = "unbekannt";
+    $gewicht = "unbekannt";
+    $groesse = "unbekannt";
+    $mahlzeit = "unbekannt";
   }
 $conn->close();
 ?>
@@ -243,13 +216,13 @@ $conn->close();
     </div>
 
     <div id="content-container">
-        <h1 class="titel" >Bird of the day</h1>
+        <h1 class="titel" >  Bird of the day</h1>
         <div class= "titelbild" >
-        <?php
+            <div class="bild"><?php
             
-            
-            echo '<img src="'.$bild.'" alt="Hier sollte ein Bild sein">';
-            ?>
+            echo '<img src="'.$bild.'" width="100%" alt="Hier sollte ein Bild sein">';
+            ?></div>
+        
         <div class="bildtext">
         <div class = "uberschrift"><?php
             echo $name;
@@ -261,40 +234,8 @@ $conn->close();
         </div>
         
     </div>
-    <table class="tabelle", width: 410px;>
-        <thead>
-            <tr>
-                <th> Name </th>
-                <th> Grösse (cm) </th>
-                <th> Gewicht (g)</th>
-                <th> Lebenserwatrung (Jahre) </th>
-                <th> Lebensraum</th>
-                <th>Ernährung</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <th><?php
-                echo $name;
-                ?></th>
-                <th> hoi</th>
-                <th> hoi</th>
-                <th> hoi</th>
-                <th> hoi</th>
-                <th> hoi</th>
-
-            </tr>
-        </tbody>
-    </table>
 
     <script>
-        const funFacts = [
-            "Hummingbirds are the only birds that can fly backward.",
-            "Owls can rotate their heads up to 270 degrees.",
-            "The peregrine falcon is the fastest bird and can reach speeds of over 240 mph."
-            // Add more bird facts here
-        ];
-
         function loadHomePage() {
             window.location="index.php";
         }
