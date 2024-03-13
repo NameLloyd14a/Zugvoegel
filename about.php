@@ -136,7 +136,7 @@
     <div class="navbar">
         <div class="logo">
             <div>
-                <img class="image" src="website_logo.png" alt="Logo" onclick="loadHomePage()">
+                <img class="image" src="Bilder/website_logo.png" alt="Logo" onclick="loadHomePage()">
             </div>
             <h1 class="headline">Zugvögel</h1>
         </div>
