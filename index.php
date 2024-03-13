@@ -13,7 +13,9 @@
 
         .image {
             width: 70%
+            
         }
+
 
         .logo {
             display: flex;
@@ -31,6 +33,8 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
+            border-radius: 5px 5px 5px 5px;
+            overflow: hidden;
         }
 
         .headline {
@@ -85,6 +89,12 @@
         }
 
         a:hover {
+            text-decoration: underline;
+            color: aquamarine;
+            margin: left;
+        }
+
+        table.tabelle tbody tr th:hover{
             text-decoration: underline;
             color: aquamarine;
             margin: left;
@@ -151,6 +161,34 @@
 
         #next-fact-button:active {
             transform: scale(0.95); /* Slight scaling when button is pressed */
+        }
+        .tabelle {
+            border-collapse: collapse;
+            margin-top: 20px;
+            width: 500px;
+            border-radius: 5px;
+            overflow: hidden;
+
+
+        }
+        table.tabelle thead tr {
+            background-color: black;
+            font-size: 15px;
+            color: aquamarine;
+            font-weight: bold;
+            text-align: left;
+
+        }
+        table.tabelle th, table.tabelle td {
+            padding : 12px 16px ;
+
+        }
+        table.tabelle tbody tr {
+            background-color: gray;
+            color: white ;
+            text-align: left;
+            font-size: 10px;
+            
         }
     </style>
 </head>
@@ -223,6 +261,31 @@ $conn->close();
         </div>
         
     </div>
+    <table class="tabelle">
+        <thead>
+            <tr>
+                <th> Name </th>
+                <th> Grösse (cm) </th>
+                <th> Gewicht (g)</th>
+                <th> Lebenserwatrung (Jahre) </th>
+                <th> Lebensraum</th>
+                <th>Ernährung</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th><?php
+                echo $name;
+                ?></th>
+                <th> hoi</th>
+                <th> hoi</th>
+                <th> hoi</th>
+                <th> hoi</th>
+                <th> hoi</th>
+
+            </tr>
+        </tbody>
+    </table>
 
     <script>
         const funFacts = [
