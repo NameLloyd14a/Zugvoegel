@@ -165,7 +165,7 @@
         .tabelle {
             border-collapse: collapse;
             margin-top: 20px;
-            width: 500px;
+            
             border-radius: 5px;
             overflow: hidden;
 
@@ -261,7 +261,7 @@ $conn->close();
         </div>
         
     </div>
-    <table class="tabelle">
+    <table class="tabelle", width: 410px;>
         <thead>
             <tr>
                 <th> Name </th>
