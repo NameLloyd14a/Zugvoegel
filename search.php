@@ -52,10 +52,7 @@
           align-items: center;
          
           background-color: whitesmoke;
-          
-
         }
-        
         .bildtext {
           
           font-size: medium;
@@ -73,10 +70,6 @@
 
 
         }
-
-          
-        
-
         .menu-links {
             color: whitesmoke;
             text-decoration: none;
@@ -152,71 +145,6 @@
         #next-fact-button:active {
             transform: scale(0.95); /* Slight scaling when button is pressed */
         }
-        .container {
-        height: 100%;
-        }
-
-        a {
-        color: inherit;
-        }
-        a:hover {
-        color: #7f8ff4;
-        }
-
-        .container {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        }
-
-        .uppercase {
-        text-transform: uppercase;
-        }
-
-        .btn {
-        display: inline-block;
-        background: transparent;
-        color: inherit;
-        font: inherit;
-        border: 0;
-        outline: 0;
-        padding: 0;
-        transition: all 200ms ease-in;
-        cursor: pointer;
-        }
-
-        .btn--primary {
-        background: #7f8ff4;
-        color: #fff;
-        box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.1);
-        border-radius: 2px;
-        padding: 12px 36px;
-        }
-
-        .btn--primary:hover {
-        background: #6c7ff2;
-        }
-
-        .btn--primary:active {
-        background: #7f8ff4;
-        box-shadow: inset 0 0 10px 2px rgba(0, 0, 0, 0.2);
-        }
-
-        .btn--inside {
-        margin-left: -96px;
-        }
-
-        .form__field {
-        width: 360px;
-        background: #fff;
-        color: #a3a3a3;
-        font: inherit;
-        box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.1);
-        border: 0;
-        outline: 0;
-        padding: 22px 18px;
-        }
     </style>
 </head>
 <title>Zugvögel</title>
@@ -233,7 +161,7 @@ if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
 $day_number = date("d");
-$sql = "SELECT * FROM `vogel` WHERE vgl_id=$day_number;";
+$sql = "SELECT * FROM `vogel` WHERE vgl_id=$day_number";
 $result = $conn->query($sql);
 if ($result->num_rows > 0) {
     // output data of each row
@@ -268,16 +196,6 @@ $conn->close();
             <a class="menu-links" href="#" onclick="openFunFacts()">Fun Facts</a>
         </div>
     </div>
-
-    <div class="container">
-        <div class="container__item">
-            <form class="form">
-                <input type="email" class="form__field" placeholder="Your E-Mail Address" />
-                <button type="button" class="btn btn--primary btn--inside uppercase">Send</button>
-            </form>
-        </div>
-    </div>
-    </form>
     <script>
 
         function loadHomePage() {

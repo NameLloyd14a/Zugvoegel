@@ -282,7 +282,7 @@ $conn->close();
         </thead>
         <tbody>
             <tr>
-                <th><?php echo $name;?></th>
+                <th><?php echo $lateinname;?></th>
                 <th><?php echo $groesse;?></th>
                 <th><?php echo $gewicht;?></th>
                 <th><?php echo $lebenserwartung;?></th>
