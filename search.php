@@ -167,7 +167,7 @@
             -webkit-appearance: none;
             -moz-appearance: none;
             appearance: none;
-            box-shadow: none; /* Entfernt den grauen Rahmen */
+            box-shadow: none; 
             color: white ;
             font-size: large;
             
@@ -177,7 +177,7 @@
         
 
         .search-btn {
-            display: none; /* Hier wurde die CSS für die Such-Schaltfläche entfernt */
+            display: none; 
         }
         
         .suche{
@@ -200,13 +200,12 @@
 <title>Zugvögel</title>
 
 <?php
-// Stelle eine Verbindung zur Datenbank her (ersetze die Daten entsprechend)
 $servername = "localhost:8889";
 $username = "root";
 $password = "root";
 $dbname = "zugvoegel";
 
-
+// Create connection
 $conn = new mysqli($servername, $username, $password, $dbname);
 // Check connection
 if ($conn->connect_error) {
@@ -214,11 +213,11 @@ if ($conn->connect_error) {
 }
 
 // Überprüfe, ob eine Suchanfrage gesendet wurde
-if(isset($_GET['query'])) {
-    $search_query = $_GET['query'];
+if(isset($_GET['search'])) {
+    $search_query = $_GET['search'];
 
     // Suche in der Datenbank nach Übereinstimmungen
-    $sql = "SELECT * FROM `deine_tabelle` WHERE `spalte` LIKE '%$search_query%'";
+    $sql = "SELECT * FROM `vogel` WHERE `name` LIKE '%$search_query%'";
     $result = $conn->query($sql);
 
     // Zeige die Suchergebnisse an
@@ -227,7 +226,7 @@ if(isset($_GET['query'])) {
             // Hier kannst du die Suchergebnisse anzeigen, z.B.:
             echo "Name: " . $row["name"] . "<br>";
             echo "Beschreibung: " . $row["beschreibung"] . "<br>";
-            echo "Bild: <img src='" . $row["bild"] . "' alt=''><br>";
+            echo "<img src='" . $row["bild"] . "' alt=''><br>";
             echo "Lateinischer Name: " . $row["lateinname"] . "<br>";
             echo "Lebenserwartung: " . $row["lebenserwartung"] . " Jahre<br>";
             echo "Gewicht: " . $row["gewicht"] . " kg<br>";
@@ -299,5 +298,4 @@ $conn->close();
         }
     </script>
 </body>
-
 </html>
