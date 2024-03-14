@@ -200,27 +200,34 @@
 <title>Zugvögel</title>
 
 <?php
+//Nutzerdaten für Datenbank
 $servername = "localhost:8889";
 $username = "root";
 $password = "root";
 $dbname = "zugvoegel";
 
-// Create connection
+// Verbindung herstellen
 $conn = new mysqli($servername, $username, $password, $dbname);
-// Check connection
+// Verbindung überprüfen
 if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
 
-// Überprüfe, ob eine Suchanfrage gesendet wurde
+// Überprüft ob eine Suchanfrage gesendet wurde
 if(isset($_GET['search'])) {
     $search_query = $_GET['search'];
 
-    // Suche in der Datenbank nach Übereinstimmungen
-    $sql = "SELECT * FROM `vogel` WHERE `name` LIKE '%$search_query%'";
-    $result = $conn->query($sql);
+    //Statement verwenden um SQl-Injection zu verhindern
+    $sql = "SELECT * FROM `vogel` WHERE `name` LIKE ?";
+    $stmt = $conn->prepare($sql);
+    // Suchanfrage an das statement anbinden
+    $stmt->bind_param("s", $search_query);
+    // Abfrage ausführen
+    $stmt->execute();
+    // Ergebnis der Abfrage abrufen
+    $result = $stmt->get_result();
 
-    // Zeige die Suchergebnisse an
+    // Suchergebnisse anzeigen
     if ($result->num_rows > 0) {
         while($row = $result->fetch_assoc()) {
             echo "Name: " . $row["name"] . "<br>";
@@ -236,6 +243,9 @@ if(isset($_GET['search'])) {
     } else {
         echo "Keine Ergebnisse gefunden";
     }
+
+    //statement schliessen
+    $stmt->close();
 }
 
 // Schließe die Verbindung zur Datenbank
