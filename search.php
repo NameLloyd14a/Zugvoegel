@@ -168,7 +168,8 @@
             -moz-appearance: none;
             appearance: none;
             box-shadow: none; /* Entfernt den grauen Rahmen */
-            color: darkblue ;
+            color: white ;
+            font-size: large;
             
 
         }
@@ -197,38 +198,53 @@
    
 </head>
 <title>Zugvögel</title>
+
 <?php
+// Stelle eine Verbindung zur Datenbank her (ersetze die Daten entsprechend)
 $servername = "localhost:8889";
 $username = "root";
 $password = "root";
 $dbname = "zugvoegel";
 
-// Create connection
+
 $conn = new mysqli($servername, $username, $password, $dbname);
 // Check connection
 if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
-$day_number = date("d");
-$sql = "SELECT * FROM `vogel` WHERE vgl_id=$day_number";
-$result = $conn->query($sql);
-if ($result->num_rows > 0) {
-    // output data of each row
-    while($row = $result->fetch_assoc()) {
-      $name= $row["name"];
-      $beschreibung = $row["beschreibung"];
-      $bild = $row["bild"];
-      $lateinname = $row["lateinname"];
+
+// Überprüfe, ob eine Suchanfrage gesendet wurde
+if(isset($_GET['query'])) {
+    $search_query = $_GET['query'];
+
+    // Suche in der Datenbank nach Übereinstimmungen
+    $sql = "SELECT * FROM `deine_tabelle` WHERE `spalte` LIKE '%$search_query%'";
+    $result = $conn->query($sql);
+
+    // Zeige die Suchergebnisse an
+    if ($result->num_rows > 0) {
+        while($row = $result->fetch_assoc()) {
+            // Hier kannst du die Suchergebnisse anzeigen, z.B.:
+            echo "Name: " . $row["name"] . "<br>";
+            echo "Beschreibung: " . $row["beschreibung"] . "<br>";
+            echo "Bild: <img src='" . $row["bild"] . "' alt=''><br>";
+            echo "Lateinischer Name: " . $row["lateinname"] . "<br>";
+            echo "Lebenserwartung: " . $row["lebenserwartung"] . " Jahre<br>";
+            echo "Gewicht: " . $row["gewicht"] . " kg<br>";
+            echo "Größe: " . $row["groesse"] . " m<br>";
+            echo "Mahlzeit: " . $row["mahlzeit"] . "<br>";
+
+            // Füge weitere Felder hinzu, die du anzeigen möchtest
+        }
+    } else {
+        echo "Keine Ergebnisse gefunden";
     }
-  } else {
-    echo '<script>alert("Could not load data from database")</script>';
-    $name= "No data";
-    $beschreibung = "Couldn't load description, please try again later";
-    $bild = "https://assets-v2.lottiefiles.com/a/0e30b444-117c-11ee-9b0d-0fd3804d46cd/A6t16MXhTI.gif";
-    $lateinname = "Nulla notitia";
-  }
+}
+
+// Schließe die Verbindung zur Datenbank
 $conn->close();
 ?>
+
 <body class=suche>
     <div class="navbar">
         <div class="logo">
@@ -246,17 +262,19 @@ $conn->close();
         </div>
         
     </div>
-    <div calss= hintergurndsuche>
+    <div class= "hintergurndsuche">
 
      <div >
-        <form style="display: flex; margin-top: 20px; justify-content:center ; align-items: center;height: 100vh;overflow: hidden;" class="bar">
+        <form method="GET" action="search.php" style="display: flex; margin-top: 20px; justify-content:center ; align-items: center;height: 100vh;overflow: hidden;" class="bar">
         <input type="search" name="search" pattern=".*\S.*" required autocomplete="off">
         <button class="search-btn" type="submit">
       <span>Search</span>
     </button>
     </form></div>
     </div>
-    
+    <div id="search-results">
+        <?php include_once("search.php"); ?>
+    </div>
     
     <script>
 
