@@ -223,7 +223,6 @@ if(isset($_GET['search'])) {
     // Zeige die Suchergebnisse an
     if ($result->num_rows > 0) {
         while($row = $result->fetch_assoc()) {
-            // Hier kannst du die Suchergebnisse anzeigen, z.B.:
             echo "Name: " . $row["name"] . "<br>";
             echo "Beschreibung: " . $row["beschreibung"] . "<br>";
             echo "<img src='" . $row["bild"] . "' alt=''><br>";
@@ -233,7 +232,6 @@ if(isset($_GET['search'])) {
             echo "Größe: " . $row["groesse"] . " m<br>";
             echo "Mahlzeit: " . $row["mahlzeit"] . "<br>";
 
-            // Füge weitere Felder hinzu, die du anzeigen möchtest
         }
     } else {
         echo "Keine Ergebnisse gefunden";
