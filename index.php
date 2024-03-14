@@ -46,15 +46,7 @@
             
 
         }
-        .titelbild{
-          display: flex ;
-          justify-content: space-between;
-          align-items: center;
-         
-          background-color: whitesmoke;
-          
-
-        }
+        
         
         .bildtext {
           
@@ -76,10 +68,6 @@
         .bild{
             width: 100%;
         }
-
-          
-        
-
         .menu-links {
             color: whitesmoke;
             text-decoration: none;
@@ -127,33 +115,120 @@
             font-weight: bold;
             text-decoration: none;
         }
-
-        #email-link:hover {
-            text-decoration: underline;
+        .img_neracher {
+            position: relative;
+            width: 100%;
+            float: center;
+            margin-right: 2%;
+            margin-bottom: 2%;
+            overflow: hidden; 
         }
 
-        #fun-facts-container p {
-            font-size: 24px; /* Increased text size */
-            margin-top: 20px;
+
+        .img_Baumwipfelpfad {
+            width: 49%;
+            float: right;
+            overflow: hidden;
         }
 
-        #next-fact-button {
-            background-color: #04AA6D;
+
+        .img_Vogelwarte_sempach_jpg {
+            width: 60%;
+            float: left;
+            overflow: hidden;
+            margin-right: 2%;
+            margin-bottom: 2%;
+        }
+
+        .img_LeBollediMagadino {
+            width: 38%;
+            float: right;
+            overflow: hidden;
+            margin-bottom: 2%;
+        }
+
+        .img_Bachalpsee {
+            width: 38%;
+            float: right;
+            overflow: hidden;
+            margin-bottom:2%;
+        }
+
+
+        .img_OeschineseeRundweg {
+            width: 60%;
+            float: left;
+            overflow: hidden;
+        }
+
+        .img_Klingnauer_Stausee {
+            width: 38%;
+            float: right;
+            overflow: hidden;
+        }
+
+        .img_Klingnauer_Stausee:hover img,
+        .img_OeschineseeRundweg:hover img,
+        .img_Bachalpsee:hover img,
+        .img_neracher:hover img,
+        .img_Baumwipfelpfad:hover img,
+        .img_Vogelwarte_sempach_jpg:hover img,
+        .img_LeBollediMagadino:hover img {
+            transform: scale(1.1);
+        }
+
+        .img_Klingnauer_Stausee img,
+        .img_OeschineseeRundweg img,
+        .img_Bachalpsee img,
+        .img_neracher img,
+        .img_Baumwipfelpfad img,
+        .img_Vogelwarte_sempach_jpg img,
+        .img_LeBollediMagadino img {
+            width: 100%;
+            height: auto;
+            transition: transform 0.3s ease;
+        }
+
+
+        .image-container {
+            position: relative;
+        }
+
+        .image-container img {
+            width: 100%;
+            height: auto;
+            transition: transform 0.3s ease;
+        }
+
+        .nerachertext,
+        .baumwipfelpfadtext,
+        .vogelwartetext,
+        .bolleditext,
+        .bachalpseetext,
+        .oeschinenseetext,
+        .klingnauertext {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 100%;
+            background-color: rgba(0, 0, 0, 0.5); 
             color: whitesmoke;
-            border: none;
-            padding: 15px 20px;
-            font-size: 20px;
-            border-radius: 10px; /* Added border-radius for a rounded look */
-            cursor: pointer;
-            transition: transform 0.2s ease-in-out; /* Added scaling animation */
+            text-align: center;
+            padding: 100%; 
+            opacity: 0; 
+            transition: opacity 0.3s ease-in-out;
+            font-size: 50px;
         }
 
-        #next-fact-button:hover {
-            background-color: #038353;
-        }
-
-        #next-fact-button:active {
-            transform: scale(0.95); /* Slight scaling when button is pressed */
+        .img_neracher:hover .image-container .nerachertext,
+        .img_Baumwipfelpfad:hover .image-container .baumwipfelpfadtext,
+        .img_Vogelwarte_sempach_jpg:hover .image-container .vogelwartetext,
+        .img_LeBollediMagadino:hover .image-container .bolleditext,
+        .img_Bachalpsee:hover .image-container .bachalpseetext,
+        .img_OeschineseeRundweg:hover .image-container .oeschinenseetext,
+        .img_Klingnauer_Stausee:hover .image-container .klingnauertext {
+            opacity: 1; 
         }
     </style>
 </head>
@@ -214,24 +289,18 @@ $conn->close();
             <a class="menu-links" href="#" onclick="openFunFacts()">Fun Facts</a>
         </div>
     </div>
-
-    <div id="content-container">
-        <h1 class="titel" >  Bird of the day</h1>
-        <div class= "titelbild" >
-            <div class="bild"><?php
-            
-            echo '<img src="'.$bild.'" width="100%" alt="Hier sollte ein Bild sein">';
-            ?></div>
+    <div class='img_neracher' onclick="openbtd()">
+    <div class="image-container" onclick="openbtd()">
+        <?php
+            echo '<img src="'.$bild.'"alt="Hier sollte ein Bild sein">';
+        ?>
+        <div class="nerachertext" onclick="openbtd()">Bird of the day</div>
         
-        <div class="bildtext">
-        <div class = "uberschrift"><?php
-            echo $name;
-            ?></div>
-            <?php
-            echo $beschreibung;
-            ?>
+    
+    </div>
+    </div>
 
-        </div>
+        
         
     </div>
 
@@ -255,7 +324,9 @@ $conn->close();
         function openFunFacts() {
             window.location="funfact.php"; 
         }
+        function openpbtd() {
+            window.location="btd.php"
+        }
     </script>
 </body>
-
 </html>
