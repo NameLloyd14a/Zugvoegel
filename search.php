@@ -145,7 +145,56 @@
         #next-fact-button:active {
             transform: scale(0.95); /* Slight scaling when button is pressed */
         }
+        
+        button, input {
+        font: 1em Hind, sans-serif;
+        line-height: 1.5em;
+        border: 1px, black;
+        }
+
+        .bar {
+            display: flex;
+            border: 1px, black;
+            
+        }
+
+        .bar input {
+            width: 50%;
+            height: 3em;
+            background: transparent;
+            border-radius: 1.5em;
+            padding: 1em;
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            appearance: none;
+            box-shadow: none; /* Entfernt den grauen Rahmen */
+            color: darkblue ;
+            
+
+        }
+
+        
+
+        .search-btn {
+            display: none; /* Hier wurde die CSS für die Such-Schaltfläche entfernt */
+        }
+        
+        .suche{
+            
+            background-image: url("/Bilder/pexels-ilo-frey-2317904.jpg");
+            position: relative;
+            background-size: cover; /* Das Bild wird so skaliert, dass es den gesamten Bereich bedeckt */
+            background-position: center; /* Das Bild wird zentriert positioniert */
+            backdrop-filter: brightness(80%);
+            position: relative;
+            margin-top: 0; /* Setzt den oberen Rand auf 0 */
+             
+        }
+
+    
+
     </style>
+   
 </head>
 <title>Zugvögel</title>
 <?php
@@ -180,7 +229,7 @@ if ($result->num_rows > 0) {
   }
 $conn->close();
 ?>
-<body>
+<body class=suche>
     <div class="navbar">
         <div class="logo">
             <div>
@@ -195,7 +244,20 @@ $conn->close();
             <a class="menu-links" href="#" onclick="openAboutUs()">About</a>
             <a class="menu-links" href="#" onclick="openFunFacts()">Fun Facts</a>
         </div>
+        
     </div>
+    <div calss= hintergurndsuche>
+
+     <div >
+        <form style="display: flex; margin-top: 20px; justify-content:center ; align-items: center;height: 100vh;overflow: hidden;" class="bar">
+        <input type="search" name="search" pattern=".*\S.*" required autocomplete="off">
+        <button class="search-btn" type="submit">
+      <span>Search</span>
+    </button>
+    </form></div>
+    </div>
+    
+    
     <script>
 
         function loadHomePage() {
