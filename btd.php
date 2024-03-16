@@ -192,7 +192,7 @@
         }
     </style>
 </head>
-<title>Zugvögel</title>
+<title>Bird of the day</title>
 <?php
 $servername = "localhost:8889";
 $username = "root";
@@ -251,11 +251,9 @@ $conn->close();
     </div>
 
     <div id="content-container">
-        <h1 class="titel" >Bird of the day</h1>
+        <h1 class="titel" >Vogel des Tages</h1>
         <div class= "titelbild" >
         <?php
-            
-            
             echo '<img src="'.$bild.'" alt="Hier sollte ein Bild sein">';
             ?>
         <div class="bildtext">

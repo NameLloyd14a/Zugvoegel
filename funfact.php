@@ -164,11 +164,14 @@
     "Möwen sind geschickte Flieger und leben oft in Küstengebieten.",
     "Wellensittiche sind beliebte Haustiere und können einfache Wörter lernen.",
     "Der Zaunkönig ist einer der kleinsten Vögel und hat einen lauten Gesang.",
-    "Raben gelten als klug und können komplexe Probleme lösen.",
+    "Raben gelten als äusserst intelligent und sind in der Lage, Werkzeuge zu nutzen, komplexe Probleme zu lösen und sogar sich selbst im Spiegel zu erkennen.",
     "Wachteln sind bodenbewohnende Vögel und haben einen schnellen Flug.",
     "Seeadler sind majestätische Greifvögel und stehen für Stärke.",
-    "Nachtigallen sind für ihren melodischen Gesang in der Dämmerung bekannt."
-
+    "Nachtigallen sind für ihren melodischen Gesang in der Dämmerung bekannt.",
+    "Der Gesang des Männchens des australischen Lyrebirds umfasst Imitationen von anderen Vögeln sowie Geräusche aus ihrer Umgebung wie Kameraauslöser oder Motorsägen.",
+    "Der Vogel Strauss hat die grössten Augen aller Landsäugetiere und kann durch seine aussergewöhnliche Sehkraft Gefahren aus grosser Entfernung erkennen.",
+    "Der Albatros hat die grösste Flügelspannweite aller lebenden Vögel und kann über Tausende von Kilometern ohne Pause über dem Ozean fliegen.",
+    "Der Kuckuck ist bekannt für sein brutparasitisches Verhalten, indem er seine Eier in die Nester anderer Vögel legt und so die Aufzucht seiner Nachkommen fremder Arten überlässt."
 
         ];
 
