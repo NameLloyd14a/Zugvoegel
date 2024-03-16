@@ -308,7 +308,6 @@ $conn->close();
       <section class="text-gray-700 body-font border-t border-gray-200">
         <div class="container px-5 py-24 mx-auto">
           <div class="flex flex-col text-center w-full mb-20">
-            <h2 class="text-xs text-indigo-500 tracking-widest font-medium title-font mb-1">Write your title here</h2>
             <h1 class="sm:text-3xl text-2xl font-medium title-font text-gray-900">Unsere Angebote</h1>
           </div>
           <div class="flex flex-wrap -m-4">
@@ -372,184 +371,28 @@ $conn->close();
             <h1 class="sm:text-3xl text-2xl font-medium title-font mb-2 text-gray-900">Title</h1>
             <p class="lg:w-1/2 w-full leading-relaxed text-base">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam eleifend ultricies bibendum</p>
           </div>
-          <div class="flex flex-wrap -m-4">
-            <div class="xl:w-1/3 md:w-1/2 p-4">
-              <div class="border border-gray-300 p-6 rounded-lg">
-                <div class="w-10 h-10 inline-flex items-center justify-center rounded-full bg-indigo-100 text-indigo-500 mb-4">
-                  <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-6 h-6" viewBox="0 0 24 24">
-                    <path d="M22 12h-4l-3 9L9 3l-3 9H2"></path>
-                  </svg>
-                </div>
-                <h2 class="text-lg text-gray-900 font-medium title-font mb-2">Title</h2>
-                <p class="leading-relaxed text-base">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam eleifend ultricies bibendum</p>
-              </div>
-            </div>
-            <div class="xl:w-1/3 md:w-1/2 p-4">
-              <div class="border border-gray-300 p-6 rounded-lg">
-                <div class="w-10 h-10 inline-flex items-center justify-center rounded-full bg-indigo-100 text-indigo-500 mb-4">
-                  <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-6 h-6" viewBox="0 0 24 24">
-                    <circle cx="6" cy="6" r="3"></circle>
-                    <circle cx="6" cy="18" r="3"></circle>
-                    <path d="M20 4L8.12 15.88M14.47 14.48L20 20M8.12 8.12L12 12"></path>
-                  </svg>
-                </div>
-                <h2 class="text-lg text-gray-900 font-medium title-font mb-2">Title</h2>
-                <p class="leading-relaxed text-base">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam eleifend ultricies bibendum</p>
-              </div>
-            </div>
-            <div class="xl:w-1/3 md:w-1/2 p-4">
-              <div class="border border-gray-300 p-6 rounded-lg">
-                <div class="w-10 h-10 inline-flex items-center justify-center rounded-full bg-indigo-100 text-indigo-500 mb-4">
-                  <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-6 h-6" viewBox="0 0 24 24">
-                    <path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"></path>
-                    <circle cx="12" cy="7" r="4"></circle>
-                  </svg>
-                </div>
-                <h2 class="text-lg text-gray-900 font-medium title-font mb-2">Title</h2>
-                <p class="leading-relaxed text-base">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam eleifend ultricies bibendum</p>
-              </div>
-            </div>
-            <div class="xl:w-1/3 md:w-1/2 p-4">
-              <div class="border border-gray-300 p-6 rounded-lg">
-                <div class="w-10 h-10 inline-flex items-center justify-center rounded-full bg-indigo-100 text-indigo-500 mb-4">
-                  <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-6 h-6" viewBox="0 0 24 24">
-                    <path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1zM4 22v-7"></path>
-                  </svg>
-                </div>
-                <h2 class="text-lg text-gray-900 font-medium title-font mb-2">Title</h2>
-                <p class="leading-relaxed text-base">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam eleifend ultricies bibendum</p>
-              </div>
-            </div>
-            <div class="xl:w-1/3 md:w-1/2 p-4">
-              <div class="border border-gray-300 p-6 rounded-lg">
-                <div class="w-10 h-10 inline-flex items-center justify-center rounded-full bg-indigo-100 text-indigo-500 mb-4">
-                  <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-6 h-6" viewBox="0 0 24 24">
-                    <path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"></path>
-                  </svg>
-                </div>
-                <h2 class="text-lg text-gray-900 font-medium title-font mb-2">Title</h2>
-                <p class="leading-relaxed text-base">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam eleifend ultricies bibendum</p>
-              </div>
-            </div>
-            <div class="xl:w-1/3 md:w-1/2 p-4">
-              <div class="border border-gray-300 p-6 rounded-lg">
-                <div class="w-10 h-10 inline-flex items-center justify-center rounded-full bg-indigo-100 text-indigo-500 mb-4">
-                  <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-6 h-6" viewBox="0 0 24 24">
-                    <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
-                  </svg>
-                </div>
-                <h2 class="text-lg text-gray-900 font-medium title-font mb-2">Title</h2>
-                <p class="leading-relaxed text-base">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam eleifend ultricies bibendum</p>
-              </div>
-            </div>
-          </div>
-          <button class="flex mx-auto mt-16 text-white bg-indigo-500 border-0 py-2 px-8 focus:outline-none hover:bg-indigo-600 rounded text-lg">Button</button>
-        </div>
-      </section>
-      <section class="text-gray-700 body-font border-t border-gray-200">
-        <div class="container px-5 py-24 mx-auto">
-          <div class="flex flex-col text-center w-full mb-20">
-            <h1 class="sm:text-3xl text-2xl font-medium title-font mb-4 text-gray-900">Our Team</h1>
-            <p class="lg:w-2/3 mx-auto leading-relaxed text-base">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam eleifend ultricies bibendum. Suspendisse potenti. Vestibulum a sem ac eros egestas lacinia sed sit amet erat</p>
-          </div>
-          <div class="flex flex-wrap -m-2">
-            <div class="p-2 lg:w-1/3 md:w-1/2 w-full">
-              <div class="h-full flex items-center border-gray-200 border p-4 rounded-lg">
-                <img alt="team" class="w-16 h-16 bg-gray-100 object-cover object-center flex-shrink-0 rounded-full mr-4" src="https://developers.elementor.com/docs/assets/img/elementor-placeholder-image.png">
-                <div class="flex-grow">
-                  <h2 class="text-gray-900 title-font font-medium">Member</h2>
-                  <p class="text-gray-500">UI Designer</p>
-                </div>
-              </div>
-            </div>
-            <div class="p-2 lg:w-1/3 md:w-1/2 w-full">
-              <div class="h-full flex items-center border-gray-200 border p-4 rounded-lg">
-                <img alt="team" class="w-16 h-16 bg-gray-100 object-cover object-center flex-shrink-0 rounded-full mr-4" src="https://developers.elementor.com/docs/assets/img/elementor-placeholder-image.png">
-                <div class="flex-grow">
-                  <h2 class="text-gray-900 title-font font-medium">Member</h2>
-                  <p class="text-gray-500">CTO</p>
-                </div>
-              </div>
-            </div>
-            <div class="p-2 lg:w-1/3 md:w-1/2 w-full">
-              <div class="h-full flex items-center border-gray-200 border p-4 rounded-lg">
-                <img alt="team" class="w-16 h-16 bg-gray-100 object-cover object-center flex-shrink-0 rounded-full mr-4" src="https://developers.elementor.com/docs/assets/img/elementor-placeholder-image.png">
-                <div class="flex-grow">
-                  <h2 class="text-gray-900 title-font font-medium">Member</h2>
-                  <p class="text-gray-500">Founder</p>
-                </div>
-              </div>
-            </div>
-            <div class="p-2 lg:w-1/3 md:w-1/2 w-full">
-              <div class="h-full flex items-center border-gray-200 border p-4 rounded-lg">
-                <img alt="team" class="w-16 h-16 bg-gray-100 object-cover object-center flex-shrink-0 rounded-full mr-4" src="https://developers.elementor.com/docs/assets/img/elementor-placeholder-image.png">
-                <div class="flex-grow">
-                  <h2 class="text-gray-900 title-font font-medium">Member</h2>
-                  <p class="text-gray-500">DevOps</p>
-                </div>
-              </div>
-            </div>
-            <div class="p-2 lg:w-1/3 md:w-1/2 w-full">
-              <div class="h-full flex items-center border-gray-200 border p-4 rounded-lg">
-                <img alt="team" class="w-16 h-16 bg-gray-100 object-cover object-center flex-shrink-0 rounded-full mr-4" src="https://developers.elementor.com/docs/assets/img/elementor-placeholder-image.png">
-                <div class="flex-grow">
-                  <h2 class="text-gray-900 title-font font-medium">Member</h2>
-                  <p class="text-gray-500">Software Engineer</p>
-                </div>
-              </div>
-            </div>
-            <div class="p-2 lg:w-1/3 md:w-1/2 w-full">
-              <div class="h-full flex items-center border-gray-200 border p-4 rounded-lg">
-                <img alt="team" class="w-16 h-16 bg-gray-100 object-cover object-center flex-shrink-0 rounded-full mr-4" src="https://developers.elementor.com/docs/assets/img/elementor-placeholder-image.png">
-                <div class="flex-grow">
-                  <h2 class="text-gray-900 title-font font-medium">Member</h2>
-                  <p class="text-gray-500">UX Researcher</p>
-                </div>
-              </div>
-            </div>
-            <div class="p-2 lg:w-1/3 md:w-1/2 w-full">
-              <div class="h-full flex items-center border-gray-200 border p-4 rounded-lg">
-                <img alt="team" class="w-16 h-16 bg-gray-100 object-cover object-center flex-shrink-0 rounded-full mr-4" src="https://developers.elementor.com/docs/assets/img/elementor-placeholder-image.png">
-                <div class="flex-grow">
-                  <h2 class="text-gray-900 title-font font-medium">Member</h2>
-                  <p class="text-gray-500">QA Engineer</p>
-                </div>
-              </div>
-            </div>
-            <div class="p-2 lg:w-1/3 md:w-1/2 w-full">
-              <div class="h-full flex items-center border-gray-200 border p-4 rounded-lg">
-                <img alt="team" class="w-16 h-16 bg-gray-100 object-cover object-center flex-shrink-0 rounded-full mr-4" src="https://developers.elementor.com/docs/assets/img/elementor-placeholder-image.png">
-                <div class="flex-grow">
-                  <h2 class="text-gray-900 title-font font-medium">Member</h2>
-                  <p class="text-gray-500">System</p>
-                </div>
-              </div>
-            </div>
-            <div class="p-2 lg:w-1/3 md:w-1/2 w-full">
-              <div class="h-full flex items-center border-gray-200 border p-4 rounded-lg">
-                <img alt="team" class="w-16 h-16 bg-gray-100 object-cover object-center flex-shrink-0 rounded-full mr-4" src="https://developers.elementor.com/docs/assets/img/elementor-placeholder-image.png">
-                <div class="flex-grow">
-                  <h2 class="text-gray-900 title-font font-medium">Member</h2>
-                  <p class="text-gray-500">Product Manager</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+        </section>
+
+
+
       <section class="text-gray-700 body-font border-t border-gray-200">
         <div class="container px-5 py-24 mx-auto">
           <div class="xl:w-1/2 lg:w-3/4 w-full mx-auto text-center">
             <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="inline-block w-8 h-8 text-gray-400 mb-8" viewBox="0 0 975.036 975.036">
               <path d="M925.036 57.197h-304c-27.6 0-50 22.4-50 50v304c0 27.601 22.4 50 50 50h145.5c-1.9 79.601-20.4 143.3-55.4 191.2-27.6 37.8-69.399 69.1-125.3 93.8-25.7 11.3-36.8 41.7-24.8 67.101l36 76c11.6 24.399 40.3 35.1 65.1 24.399 66.2-28.6 122.101-64.8 167.7-108.8 55.601-53.7 93.7-114.3 114.3-181.9 20.601-67.6 30.9-159.8 30.9-276.8v-239c0-27.599-22.401-50-50-50zM106.036 913.497c65.4-28.5 121-64.699 166.9-108.6 56.1-53.7 94.4-114.1 115-181.2 20.6-67.1 30.899-159.6 30.899-277.5v-239c0-27.6-22.399-50-50-50h-304c-27.6 0-50 22.4-50 50v304c0 27.601 22.4 50 50 50h145.5c-1.9 79.601-20.4 143.3-55.4 191.2-27.6 37.8-69.4 69.1-125.3 93.8-25.7 11.3-36.8 41.7-24.8 67.101l35.9 75.8c11.601 24.399 40.501 35.2 65.301 24.399z"></path>
             </svg>
-            <p class="leading-relaxed text-lg">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam eleifend ultricies bibendum. Suspendisse potenti. Vestibulum a sem ac eros egestas lacinia sed sit amet erat. Mauris euismod vehicula eros, ac consectetur turpis accumsan ac. Vivamus vel vestibulum purus. Donec consectetur consequat hendrerit. Mauris ac venenatis arcu. Proin tortor urna, accumsan et nisi et, egestas rhoncus nisi. Curabitur at est consectetur, fermentum tortor ac, dapibus erat. Morbi facilisis ullamcorper elit at accumsan. Aenean et tellus et tortor fermentum pulvinar.
+            <p class="leading-relaxed text-lg">Liebe Vogelbegeisterte,<br><br>
+
+            ich freue mich, euch auf unserer neuen Website begrüssen zu dürfen, die sich ganz der faszinierenden Welt der Vögel widmet. Als leidenschaftlicher Vogelbeobachter und Naturliebhaber habe ich diese Plattform ins Leben gerufen, um eine umfassende Datenbank von Vogelarten zu erstellen und gleichzeitig Vorschläge für die besten Beobachtungsorte anzubieten.<br><br>
+            Die Idee entstand aus meiner eigenen Erfahrung, stundenlang durch Felder, Wälder und Parks gestreift zu sein, auf der Suche nach seltenen Vogelarten oder einfach nur, um die Schönheit der Natur zu geniessen. Dabei stiess ich oft auf Schwierigkeiten, Informationen über bestimmte Vogelarten zu finden oder herauszufinden, wo ich die besten Chancen hatte, sie zu entdecken.<br><br>
+            Mit dieser Website möchte ich diese Hürden für alle Vogelbegeisterten beseitigen. Unsere umfangreiche Datenbank bietet detaillierte Informationen über verschiedene Vogelarten, ihre Merkmale, Verbreitungsgebiete und Verhaltensweisen. Darüber hinaus bieten wir Empfehlungen für die besten Spotting-Orte.<br><br>
+            Mein Ziel ist es, anderen Vogelbegeisterten zu helfen, ihre Leidenschaft zu vertiefen, neue Arten zu entdecken und die Natur noch intensiver zu erleben. Ich hoffe, dass unsere Website euch dabei unterstützen wird, eure Vogelbeobachtungserlebnisse auf ein neues Level zu heben und die Schönheit und Vielfalt der Vogelwelt in vollen Zügen zu geniessen.<br><br>
+            Herzlich willkommen auf unserer Plattform und viel Freude beim Vogelbeobachten!
 
             </p>
             <span class="inline-block h-1 w-10 rounded bg-indigo-500 mt-8 mb-6"></span>
-            <h2 class="text-gray-900 font-medium title-font tracking-wider text-sm">Author</h2>
-            <p class="text-gray-500">Position</p>
+            <h2 class="text-gray-900 font-medium title-font tracking-wider text-sm">Lukas Lisibach</h2>
+            <p class="text-gray-500">Gründer</p>
           </div>
         </div>
       </section>
