@@ -231,6 +231,15 @@
         .img_Klingnauer_Stausee:hover .image-container .klingnauertext {
             opacity: 1; 
         }
+        input {
+          width: 100%;
+          padding: 12px 20px;
+          margin: 8px 0;
+          box-sizing: border-box;
+          border: solid #22c55e;
+          border-radius: 4px;
+        }
+        
     </style>
 </head>
 <title>Zugvögel</title>
@@ -273,6 +282,7 @@ if ($result->num_rows > 0) {
     $mahlzeit = "unbekannt";
   }
 $conn->close();
+
 ?>
 <body>
     <div class="navbar">
@@ -369,15 +379,13 @@ $conn->close();
         <div class="container px-5 py-24 mx-auto">
           <div class="flex flex-wrap w-full mb-20 flex-col items-center text-center">
             <h1 class="sm:text-3xl text-2xl font-medium title-font mb-2 text-gray-900">Newsletter</h1>
-            <p class="lg:w-1/2 w-full leading-relaxed text-base">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam eleifend ultricies bibendum</p>
-            <form action="/action_page.php">
+            <p class="lg:w-1/2 w-full leading-relaxed text-base">Erfahren sie regelmässig spannende Neuigkeiten über die Welt der Vögel auf unserem Newsletter.</p>
+            <form action="newsletter.php" method="post">
               <input type="email" id="email" name="email" placeholder="Ihre E-mail Adresse">
             </form>
           </div>
         </div>
       </section>
-
-
 
       <section class="text-gray-700 body-font border-t border-gray-200">
         <div class="container px-5 py-24 mx-auto">
@@ -400,8 +408,6 @@ $conn->close();
           </div>
         </div>
       </section>
-
-
 
     <script>
         function loadHomePage() {

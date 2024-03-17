@@ -319,10 +319,10 @@
         }
         .container_about_text {
             background-color: whitesmoke;
-            height: 50%; /* Use 100% height to occupy the entire container */
+            height: 50%; 
             width: 67%;
             display: flex;
-            flex-direction: column; /* Arrange items vertically */
+            flex-direction: column; 
             justify-content: center;
             font-size: 18px;
 
@@ -351,7 +351,15 @@
             <a class="menu-links" href="#" onclick="openFunFacts()">Fun Facts</a>
         </div>
     </div>
-    
+    <section>
+  <h2 class="section-title">Über uns</h2>
+
+    <div class='container'>
+    <p style= 'text-align : left;'> <br>Wir sind leidenschaftliche Vogelbeobachter und haben diese Webseite ins Leben gerufen, um anderen Naturliebhabern eine Plattform zu bieten, um sich über gefiederte Freunde zu informieren. Unsere umfangreiche Vogeldatenbank ermöglicht es Ihnen, nach verschiedenen Arten zu suchen, Details über ihre Lebensweise zu erfahren und Fotos anzusehen. 
+    <br><br>Darüber hinaus bieten wir auch Vorschläge für Orte an, die Sie besuchen können, um die Vielfalt der Vogelwelt hautnah zu erleben. Ob Sie nun ein erfahrener Vogelbeobachter sind oder gerade erst anfangen, sich für Vögel zu interessieren, unsere empfohlenen Orte bieten Ihnen die Möglichkeit, verschiedene Arten in ihrer natürlichen Umgebung zu beobachten und zu genießen.
+    <br><br>Treten Sie unserer Community bei, entdecken Sie neue Arten, teilen Sie Ihre Beobachtungen und lassen Sie sich von den Schönheiten der Vogelwelt inspirieren. Willkommen bei Zugvögel - wo die Welt der Vögel zum Leben erwacht!</p>
+    </div>
+    </section>
     <section>
     <div class="container flow-content">
       <h2 class="section-title">Unser Team</h2>
@@ -421,18 +429,12 @@
   </section>
   <script src="/js/main.js"></script>
 
-  <h2 class="section-title">Über uns</h2>
-
-    <div class='container'>
-    <p style= 'text-align : left;'> <br>Wir sind leidenschaftliche Vogelbeobachter und haben diese Webseite ins Leben gerufen, um anderen Naturliebhabern eine Plattform zu bieten, um sich über gefiederte Freunde zu informieren. Unsere umfangreiche Vogeldatenbank ermöglicht es Ihnen, nach verschiedenen Arten zu suchen, Details über ihre Lebensweise zu erfahren und Fotos anzusehen. 
-    <br><br>Darüber hinaus bieten wir auch Vorschläge für Orte an, die Sie besuchen können, um die Vielfalt der Vogelwelt hautnah zu erleben. Ob Sie nun ein erfahrener Vogelbeobachter sind oder gerade erst anfangen, sich für Vögel zu interessieren, unsere empfohlenen Orte bieten Ihnen die Möglichkeit, verschiedene Arten in ihrer natürlichen Umgebung zu beobachten und zu genießen.
-    <br><br>Treten Sie unserer Community bei, entdecken Sie neue Arten, teilen Sie Ihre Beobachtungen und lassen Sie sich von den Schönheiten der Vogelwelt inspirieren. Willkommen bei Zugvögel - wo die Welt der Vögel zum Leben erwacht!<br><br></p>
-    </div>
-
+    <section>
     <h2 class="section-title">Kontakt</h2>
     <div class='container'>
         <p style= 'text-align: center;'>Wenn Sie Fragen haben, können Sie sich gerne per E-Mail an uns wenden:<br><br>
         <a id="email-link" href=mailto:vogelexperten@gmail.com>vogelexperten@gmail.com</a><br><br></p>
+    </section>
     <script>
         function loadHomePage() {
             window.location="index.php";
