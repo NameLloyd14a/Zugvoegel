@@ -135,7 +135,6 @@
     </div>
 
     <div id="content-container">
-        <!-- Content container for Fun Facts -->
     </div>
 
     <script>

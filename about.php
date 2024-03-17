@@ -432,7 +432,7 @@
     <h2 class="section-title">Kontakt</h2>
     <div class='container'>
         <p style= 'text-align: center;'>Wenn Sie Fragen haben, können Sie sich gerne per E-Mail an uns wenden:<br><br>
-        <a id="email-link" href=mailto:“vogelexperten@gmail.com”>vogelexperten@gmail.com</a><br><br></p>
+        <a id="email-link" href=mailto:vogelexperten@gmail.com>vogelexperten@gmail.com</a><br><br></p>
     <script>
         function loadHomePage() {
             window.location="index.php";

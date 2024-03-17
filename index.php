@@ -368,10 +368,14 @@ $conn->close();
       <section class="text-gray-700 body-font border-t border-gray-200">
         <div class="container px-5 py-24 mx-auto">
           <div class="flex flex-wrap w-full mb-20 flex-col items-center text-center">
-            <h1 class="sm:text-3xl text-2xl font-medium title-font mb-2 text-gray-900">Title</h1>
+            <h1 class="sm:text-3xl text-2xl font-medium title-font mb-2 text-gray-900">Newsletter</h1>
             <p class="lg:w-1/2 w-full leading-relaxed text-base">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam eleifend ultricies bibendum</p>
+            <form action="/action_page.php">
+              <input type="email" id="email" name="email" placeholder="Ihre E-mail Adresse">
+            </form>
           </div>
-        </section>
+        </div>
+      </section>
 
 
 
@@ -392,7 +396,7 @@ $conn->close();
             </p>
             <span class="inline-block h-1 w-10 rounded bg-indigo-500 mt-8 mb-6"></span>
             <h2 class="text-gray-900 font-medium title-font tracking-wider text-sm">Lukas Lisibach</h2>
-            <p class="text-gray-500">Gründer</p>
+            <p class="text-gray-500">Founder</p>
           </div>
         </div>
       </section>

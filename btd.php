@@ -54,9 +54,8 @@
           display: flex ;
           justify-content: space-between;
           align-items: center;
-         
           background-color: whitesmoke;
-          
+          border-radius: 10px;
 
         }
         
@@ -73,11 +72,20 @@
 
           font-size: 25px;
           font-weight: bold;
+          margin-bottom: 10px;
+
+
+        }
+        .uberschrift_2{
+          display: flex ;
+          justify-content: left;
+
+          font-size: 17px;
+          font-weight: bold;
           margin-bottom: 30px;
 
 
         }
-
           
         
 
@@ -186,10 +194,11 @@
         table.tabelle tbody tr {
             background-color: gray;
             color: white ;
-            text-align: left;
-            font-size: 10px;
+            text-align: middle;
+            font-size: 13px;
             
         }
+        
     </style>
 </head>
 <title>Bird of the day</title>
@@ -216,6 +225,7 @@ if ($result->num_rows > 0) {
       $bild = $row["bild"];
       $lateinname = $row["lateinname"];
       $lebenserwartung = $row["lebenserwartung"]; //in Jahren
+      $lebensraum = $row["land"]; //lebensraum
       $gewicht = $row["gewicht"]; //gewicht in g
       $groesse = $row["groesse"]; //grösse in cm
       $mahlzeit = $row["mahlzeit"];
@@ -230,6 +240,7 @@ if ($result->num_rows > 0) {
     $gewicht = "unbekannt";
     $groesse = "unbekannt";
     $mahlzeit = "unbekannt";
+    $lebensraum = "unbekannt";
   }
 $conn->close();
 ?>
@@ -254,23 +265,17 @@ $conn->close();
         <h1 class="titel" >Vogel des Tages</h1>
         <div class= "titelbild" >
         <?php
-            echo '<img src="'.$bild.'" alt="Hier sollte ein Bild sein">';
+            echo '<img class="titelbild" src="'.$bild.'" alt="Hier sollte ein Bild sein">';
             ?>
         <div class="bildtext">
-        <div class = "uberschrift"><?php
-            echo $name;
-            ?></div>
-            <?php
-            echo $beschreibung;
-            ?>
+        <div class = "uberschrift"><?php echo $name ?></div>
+        <div class = "uberschrift_2"><?php echo $lateinname ?> </div>
+            <?php echo $beschreibung ?> </div>
 
-        </div>
-        
     </div>
     <table class="tabelle", width: 410px;>
         <thead>
             <tr>
-                <th> Name </th>
                 <th> Grösse (cm) </th>
                 <th> Gewicht (g)</th>
                 <th> Lebenserwartung (Jahre) </th>
@@ -280,11 +285,10 @@ $conn->close();
         </thead>
         <tbody>
             <tr>
-                <th><?php echo $lateinname;?></th>
                 <th><?php echo $groesse;?></th>
                 <th><?php echo $gewicht;?></th>
                 <th><?php echo $lebenserwartung;?></th>
-                <th><?php echo $Lebensraum;?></th>
+                <th><?php echo $lebensraum;?></th>
                 <th><?php echo $mahlzeit;?></th>
 
             </tr>
