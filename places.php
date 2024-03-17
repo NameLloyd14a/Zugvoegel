@@ -335,13 +335,30 @@
             window.location="places.php"
         }
         function openplacesneracher() {
-            window.location="placesneracher.php"
+            window.location="/places/placesneracher.php"
         }
 
         function openFunFacts() {
             window.location="funfact.php"; 
         }
-
+        function openplacesbaumwipfelpfad() {
+            window.location="baumwipfelpfad.php"
+        }
+        function openplacesvogelwarte() {
+            window.location="vogelwarte.php"
+        }
+        function openplacesbolledi() {
+            window.location="bolledimagadino.php"
+        }
+        function openplacesbachalpsee() {
+            window.location="bachalpsee.php"
+        }
+        function openplacesoeschinensee() {
+            window.location="oeschinensee.php"
+        }
+        function openplacesklingnauer() {
+            window.location="klingnauerstausee.php"
+        }
          // Remove the call to openPlaces() to avoid automatic redirection
 
     </script>

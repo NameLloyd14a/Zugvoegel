@@ -87,7 +87,9 @@
             margin-right: 20px;
             font-size: 24px;
         }
-
+        a {
+            color: black;
+        }
         a:hover {
             text-decoration: underline;
             color: aquamarine;
@@ -113,13 +115,13 @@
         }
 
         #email-link {
-            color: #04AA6D;
-            font-weight: bold;
-            text-decoration: none;
+            color: black;
+            text-decoration: underline;
         }
 
         #email-link:hover {
             text-decoration: underline;
+            color: aquamarine;
         }
         .ortbild {
             margin-top: 10px;
@@ -148,7 +150,7 @@
     <div class="navbar">
         <div class="logo">
             <div>
-                <img class="image" src="Bilder/website_logo.png" alt="Logo" onclick="loadHomePage()">
+                <img class="image" src="/Bilder/website_logo.png" alt="Logo" onclick="loadHomePage()">
             </div>
             <h1 class="headline">Zugvögel</h1>
         </div>
@@ -173,7 +175,7 @@
     </div>
     <div class="titelvideo">
             <video autoplay controls width="85%">
-                <source src="Bilder/Video.mp4" type="video/mp4">
+                <source src="/Bilder/Video.mp4" type="video/mp4">
             </video>
     </div>
     <div class='placescontainer'>
@@ -198,29 +200,30 @@
         <a href="https://maps.app.goo.gl/kqxqEYgJJySsJfdaA">Dielsdorferstrasse 13</a>
         8173 Neerach<br>
         <a href="tel:044-858-13-00">044 858 13 00</a>
+        <a id="email-link" href=mailto:neeracherried@birdlife.ch>neeracherried@birdlife.ch</a>
         <a href="https://www.birdlife.ch/de/content/naturzentrum-neeracherried">Website</a></p>
     </div>
     
 
     <script>
         function loadHomePage() {
-            window.location = "index.php";
+            window.location = "../index.php";
         }
 
         function openContactTab() {
-            window.location = "search.php";
+            window.location = "../search.php";
         }
 
         function openAboutUs() {
-            window.location = "about.php";
+            window.location = "../about.php";
         }
 
         function openPlaces() {
-            window.location = "places.php";
+            window.location = "../places.php";
         }
 
         function openFunFacts() {
-            window.location = "funfact.php";
+            window.location = "../funfact.php";
         }
         
     </script>
