@@ -390,6 +390,7 @@ $conn->close();
         function openFunFacts() {
             window.location="funfact.php"; 
         }
+        window.scrollTo(0,document.body.scrollHeight);
     </script>
 </body>
 </html>
