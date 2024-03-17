@@ -45,30 +45,35 @@
             font-size: 80px;
             font-weight: bold;
             align-items: center;
-            margin-top: 10px;
+            margin-top: 20px;
             margin-left: 20px;
+            text-align: center;
         }
-
-        .container {
+        .placescontainer {
+            display:flex;
+            width:100%;
+            justify-content: center;
+        }
+        .placestext {
             background-color: whitesmoke;
             height: 50%; /* Use 100% height to occupy the entire container */
-            width: 67%;
+            width: 85%;
             display: flex;
             flex-direction: column; /* Arrange items vertically */
             justify-content: center;
             font-size: 18px;
-
-            position: absolute;
-            top: 650px;
-            left: 50%;
-            transform: translate(-50%, -50%);
+            text-align: left;
+            position: flex;
+            margin-left: 120px;
+            margin-right: 120px;
+            
         }
 
-        .titelbild {
+        .titelvideo {
             display: flex;
             justify-content: center;
             padding: 20px;
-            margin-top:900px;
+            margin-top:10px;
         }
 
         p {
@@ -107,17 +112,6 @@
             padding: 20px;
         }
 
-        #contact-container,
-        #fun-facts-container {
-            text-align: center;
-        }
-
-        #contact-container p,
-        #fun-facts-container p {
-            font-size: 18px;
-            margin-top: 20px;
-        }
-
         #email-link {
             color: #04AA6D;
             font-weight: bold;
@@ -127,29 +121,24 @@
         #email-link:hover {
             text-decoration: underline;
         }
-
-        #fun-facts-container p {
-            font-size: 24px; /* Increased text size */
-            margin-top: 20px;
+        .ortbild {
+            margin-top: 10px;
+            justify-content: center;
+            display: flex ;
+            width: 80%;
+            height: 80%;
+            border-radius: 10px;
         }
-
-        #next-fact-button {
-            background-color: #04AA6D;
-            color: whitesmoke;
-            border: none;
-            padding: 15px 20px;
+        .ortbild_container {
+            display:flex;
+            width:100%;
+            justify-content: center;
+        }
+        .untertitel {
+            color: black;
             font-size: 20px;
-            border-radius: 10px; /* Added border-radius for a rounded look */
-            cursor: pointer;
-            transition: transform 0.2s ease-in-out; /* Added scaling animation */
-        }
-
-        #next-fact-button:hover {
-            background-color: #038353;
-        }
-
-        #next-fact-button:active {
-            transform: scale(0.95); /* Slight scaling when button is pressed */
+            font-weight: bold;
+            text-align: left;
         }
     </style>
 </head>
@@ -166,20 +155,30 @@
 
         <div class="menu">
             <a class="menu-links" href="#" onclick="openPlaces()">Places</a>
-            <a class="menu-links" href="javascript:void(0);" onclick="openContactTab()">Contact</a>
+            <a class="menu-links" href="javascript:void(0);" onclick="openContactTab()">Suche</a>
             <a class="menu-links" href="#" onclick="openAboutUs()">About</a>
             <a class="menu-links" href="#" onclick="openFunFacts()">Fun Facts</a>
         </div>
     </div>
-
-    <h1 class='titel' style='text-align : center;' font-size: 30px; >Neeracherried</h1>
-
-    <div class='container'>
-    <p style= 'text-align : left;'> <br>Das BirdLife-Naturzentrum Neeracherried liegt am Rand eines der letzten grossen Flachmoore der Schweiz. Dank einem Steg ins Ried und zwei Beobachtungshütten lässt sich die vielfältige Natur – speziell Vögel – hautnah erleben: Im Ried brüten Kiebitz, Eisvogel und Lachmöwe, und hier rasten Zugvögel wie Grünschenkel oder Silberreiher.
+    <div class= 'titel'>
+    <h1 class='titel'>Neeracherried</h1>
+    </div>
+    <div class='ortbild_container'>
+        <img class='ortbild'src="/Bilder/Naturschutzzentrum_quer.jpg" alt="Neeracherried">
+    </div>
+    <div class= 'placescontainer'>
+    <p class='placestext'> <br>Das BirdLife-Naturzentrum Neeracherried liegt am Rand eines der letzten grossen Flachmoore der Schweiz. Dank einem Steg ins Ried und zwei Beobachtungshütten lässt sich die vielfältige Natur – speziell Vögel – hautnah erleben: Im Ried brüten Kiebitz, Eisvogel und Lachmöwe, und hier rasten Zugvögel wie Grünschenkel oder Silberreiher.
         Im Gebäude gibt es eine interaktive Ausstellung zum Lebensraum Ried, die auch für Kinder geeignet ist. Eine Videoschau, zwei Naturpfade und Sonderausstellungen - aktuell zu "Geheimnisvolle Unterwasserwelt" mit lebendigen Kleintieren in Aquarien – runden das attraktive Angebot ab.
-        Das BirdLife-Naturzentrum Neeracherried ist nicht nur für Einzelbesucher offen, sondern auch für alle Arten von Gruppen, von Familien über Vereine, und Firmen bis zu Verwaltungen. Für Schulen gibt es spezielle Materialien.
-        <br><br><br>
-        Ihr Anlass
+        Das BirdLife-Naturzentrum Neeracherried ist nicht nur für Einzelbesucher offen, sondern auch für alle Arten von Gruppen, von Familien über Vereine, und Firmen bis zu Verwaltungen. Für Schulen gibt es spezielle Materialien. </p>
+    </div>
+    <div class="titelvideo">
+            <video autoplay controls width="85%">
+                <source src="Bilder/Video.mp4" type="video/mp4">
+            </video>
+    </div>
+    <div class='placescontainer'>
+        <p class='placestext'> 
+        <bold>Ihr Anlass:</bold><br>
         Firmenausflug mit Apéro, Familienfest mit Führung in die Natur, Hochzeits-Überraschungsausflug: Dies alles ist im BirdLife-Naturzentrum möglich. Wir beraten Sie gerne.
         <br>
         Schulen und Kinder
@@ -193,22 +192,15 @@
         <br><br>
         November bis März
         2. Sonntag des Monats 9–16 Uhr
-        <br><br><br>
+        <br><br>
         Kontakt:<br>
         BirdLife-Naturzentrum Neeracherried<br>
-        <a href="https://maps.app.goo.gl/kqxqEYgJJySsJfdaA">Dielsdorferstrasse 13</a><br>
+        <a href="https://maps.app.goo.gl/kqxqEYgJJySsJfdaA">Dielsdorferstrasse 13</a>
         8173 Neerach<br>
-        <a href="tel:044-858-13-00">044 858 13 00</a><br>
+        <a href="tel:044-858-13-00">044 858 13 00</a>
         <a href="https://www.birdlife.ch/de/content/naturzentrum-neeracherried">Website</a></p>
     </div>
-
-
-        <div class="titelbild">
-            <video autoplay controls width="70%">
-                <source src="Bilder/Video.mp4" type="video/mp4">
-            </video>
-        </div>
-    </div>
+    
 
     <script>
         function loadHomePage() {
@@ -216,7 +208,7 @@
         }
 
         function openContactTab() {
-            window.location = "contact.php";
+            window.location = "search.php";
         }
 
         function openAboutUs() {
@@ -230,7 +222,7 @@
         function openFunFacts() {
             window.location = "funfact.php";
         }
-        // Remove the call to openPlaces() to avoid automatic redirection
+        
     </script>
 </body>
 </html>

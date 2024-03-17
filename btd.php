@@ -255,7 +255,7 @@ $conn->close();
 
         <div class="menu">
             <a class="menu-links" href="#" onclick="openPlaces()">Places</a>
-            <a class="menu-links" href="javascript:void(0);" onclick="openContactTab()">Contact</a>
+            <a class="menu-links" href="javascript:void(0);" onclick="openContactTab()">Suche</a>
             <a class="menu-links" href="#" onclick="openAboutUs()">About</a>
             <a class="menu-links" href="#" onclick="openFunFacts()">Fun Facts</a>
         </div>
@@ -301,7 +301,7 @@ $conn->close();
         }
 
         function openContactTab() {
-            window.location="contact.php";
+            window.location="search.php";
         }
 
         function openAboutUs() {
