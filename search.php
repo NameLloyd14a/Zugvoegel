@@ -325,7 +325,9 @@ $conn->close();
     </form></div>
     </div>
     <div id="search-results" class="suchresultate">
-        <?php if ($result->num_rows > 0) {
+        <?php 
+        if(isset($_GET['search'])) {
+        if ($result->num_rows > 0) {
         while($row = $result->fetch_assoc()) {
             echo "<span class = 'uberschrift'>" . "Suche nach: " . $row["name"] . "<br>"." </span>";
             echo "<div class = 'titelbild'>"."<img src='" . $row["bild"] . "' alt=''><br>";
@@ -362,6 +364,7 @@ $conn->close();
         }else {
              echo "Keine Ergebnisse gefunden";
         }
+    }
         ?>
     </div>
 
