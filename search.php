@@ -31,6 +31,11 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            border-radius: 5px;
         }
 
         .headline {
@@ -50,7 +55,7 @@
           display: flex ;
           justify-content: space-between;
           align-items: center;
-         
+          border-radius: 5px;
           background-color: whitesmoke;
         }
         .bildtext {
@@ -67,6 +72,8 @@
           font-size: 25px;
           font-weight: bold;
           margin-bottom: 30px;
+          margin-top: 20px;
+          margin-left: 10px;
 
 
         }
@@ -149,12 +156,12 @@
         button, input {
         font: 1em Hind, sans-serif;
         line-height: 1.5em;
-        border: 1px, black;
+        border: 1px, white;
         }
 
         .bar {
             display: flex;
-            border: 1px, black;
+            border: 1px, white;
             
         }
 
@@ -173,11 +180,30 @@
             
 
         }
+         
+        .bildtext {
+          
+          font-size: medium;
+          font-weight: 20px;
+          margin-left: 10px;
+          
+        }
+        .titelbild{
+          display: flex ;
+          justify-content: space-between;
+          align-items: center;
+          background-color: whitesmoke;
+          border-radius: 10px;
+          margin-left: 10px;
+          margin-right: 10px;
+
+        }
 
         
 
         .search-btn {
             display: none; 
+            color: white;
         }
         
         .suche{
@@ -190,6 +216,40 @@
             position: relative;
             margin-top: 0; /* Setzt den oberen Rand auf 0 */
              
+        }
+        .suchresultate{
+            background-color: white;
+            border-radius: 5px;
+
+        }
+        .tabelle {
+            border-collapse: collapse;
+            margin-top: 20px;
+            margin-left : 20px;
+            
+            border-radius: 5px;
+            overflow: hidden;
+
+
+        }
+        table.tabelle thead tr {
+            background-color: black;
+            font-size: 15px;
+            color: aquamarine;
+            font-weight: bold;
+            text-align: left;
+
+        }
+        table.tabelle th, table.tabelle td {
+            padding : 12px 16px ;
+
+        }
+        table.tabelle tbody tr {
+            background-color: gray;
+            color: white ;
+            text-align: middle;
+            font-size: 13px;
+            
         }
 
     
@@ -228,22 +288,7 @@ if(isset($_GET['search'])) {
     $result = $stmt->get_result();
 
     // Suchergebnisse anzeigen
-    if ($result->num_rows > 0) {
-        while($row = $result->fetch_assoc()) {
-            echo "Name: " . $row["name"] . "<br>";
-            echo "Beschreibung: " . $row["beschreibung"] . "<br>";
-            echo "<img src='" . $row["bild"] . "' alt=''><br>";
-            echo "Lateinischer Name: " . $row["lateinname"] . "<br>";
-            echo "Lebenserwartung: " . $row["lebenserwartung"] . " Jahre<br>";
-            echo "Gewicht: " . $row["gewicht"] . " kg<br>";
-            echo "Größe: " . $row["groesse"] . " m<br>";
-            echo "Mahlzeit: " . $row["mahlzeit"] . "<br>";
-
-        }
-    } else {
-        echo "Keine Ergebnisse gefunden";
-    }
-
+    
     //statement schliessen
     $stmt->close();
 }
@@ -279,9 +324,47 @@ $conn->close();
     </button>
     </form></div>
     </div>
-    <div id="search-results">
-        <?php include_once("search.php"); ?>
+    <div id="search-results" class="suchresultate">
+        <?php if ($result->num_rows > 0) {
+        while($row = $result->fetch_assoc()) {
+            echo "<span class = 'uberschrift'>" . "Suche nach: " . $row["name"] . "<br>"." </span>";
+            echo "<div class = 'titelbild'>"."<img src='" . $row["bild"] . "' alt=''><br>";
+            echo "<span class = 'bildtext'>" . $row["beschreibung"] . "<br>"." </span>". "</div>";
+            
+            echo"<table class='tabelle', width: 410px;>";
+            echo"<thead>";
+            echo"<tr>";
+
+            echo "<th> Lateinischer Name </th>";
+            echo "<th> Lebenserwartung </th>";
+            echo  "<th> Gewicht </th>";
+            echo  "<th> Grösse</th>" ;
+            echo  "<th>Ernährung</th>";
+            echo"</tr>";
+            echo "</thead>";
+            echo"<tbody>";
+            echo"<tr>";
+                 echo  "<td>" . $row["lateinname"] . "<br>". "</th>";
+                 echo "<td>". $row["lebenserwartung"] . " Jahre<br>". "</td>" ;
+                 echo "<td>".$row["gewicht"] . " kg<br>". "</td>";
+                 echo "<td>". $row["groesse"] . " m<br>"."</td>";
+                 echo  "<td>". $row["mahlzeit"] . "<br>". "</td>";
+
+                 echo "</tr>" ;
+                 echo"</tbody>";
+                 echo"</table>";
+     
+                
+
+        
+            }
+             
+        }else {
+             echo "Keine Ergebnisse gefunden";
+        }
+        ?>
     </div>
+
     
     <script>
 
