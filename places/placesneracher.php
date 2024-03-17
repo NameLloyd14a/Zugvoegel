@@ -144,7 +144,7 @@
         }
     </style>
 </head>
-<title>Zugvögel</title>
+<title>Neeracherried</title>
 
 <body>
     <div class="navbar">
@@ -180,13 +180,13 @@
     </div>
     <div class='placescontainer'>
         <p class='placestext'> 
-        <bold>Ihr Anlass:</bold><br>
+        <b>Ihr Anlass:</b><br>
         Firmenausflug mit Apéro, Familienfest mit Führung in die Natur, Hochzeits-Überraschungsausflug: Dies alles ist im BirdLife-Naturzentrum möglich. Wir beraten Sie gerne.
         <br>
         Schulen und Kinder
         Schulklassen jeden Alters, Lehrerkollegien und Kindergruppen sind im BirdLife-Naturzentrum Neeracherried speziell willkommen. Wir veranstalten stufengerechte Führungen vom Kindergarten- bis zum Universitätsniveau. Für alle Schulstufen (Unterstufe, Mittelstufe, Oberstufe, Kantonsschule Oberstufe) gibt es auf der Webpage ein umfangreiches Vor- und Nachbereitungsdossier für die Führung im Neeracherried. Die wichtigsten Themen sind Vögel und Vogelzug, Kleintiere im Teich sowie Naturschutz - wir passen das Programm gerne den spezifischen Voraussetzungen der Gruppen an.
         <br><br><br>
-        Öffnungszeiten:<br>
+        <b>Öffnungszeiten:</b>
         April bis Oktober<br>
         Mi 14–20 Uhr<br>
         Sa 10–18 Uhr<br>
@@ -195,7 +195,7 @@
         November bis März
         2. Sonntag des Monats 9–16 Uhr
         <br><br>
-        Kontakt:<br>
+        <b>Kontakt:</b>
         BirdLife-Naturzentrum Neeracherried<br>
         <a href="https://maps.app.goo.gl/kqxqEYgJJySsJfdaA">Dielsdorferstrasse 13</a>
         8173 Neerach<br>

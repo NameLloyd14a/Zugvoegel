@@ -276,20 +276,20 @@ $conn->close();
     <table class="tabelle", width: 410px;>
         <thead>
             <tr>
-                <th> Grösse (cm) </th>
-                <th> Gewicht (g)</th>
-                <th> Lebenserwartung (Jahre) </th>
-                <th> Lebensraum</th>
+                <th>Grösse</th>
+                <th>Gewicht</th>
+                <th>Lebenserwartung</th>
+                <th>Lebensraum</th>
                 <th>Ernährung</th>
             </tr>
         </thead>
         <tbody>
             <tr>
-                <th><?php echo $groesse;?></th>
-                <th><?php echo $gewicht;?></th>
-                <th><?php echo $lebenserwartung;?></th>
-                <th><?php echo $lebensraum;?></th>
-                <th><?php echo $mahlzeit;?></th>
+                <th><?php echo $groesse ." cm"?></th>
+                <th><?php echo $gewicht ." g"?></th>
+                <th><?php echo $lebenserwartung ." Jahre"?></th>
+                <th><?php echo $lebensraum?></th>
+                <th><?php echo $mahlzeit?></th>
 
             </tr>
         </tbody>

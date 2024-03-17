@@ -346,8 +346,8 @@ $conn->close();
             echo"<tr>";
                  echo  "<td>" . $row["lateinname"] . "<br>". "</th>";
                  echo "<td>". $row["lebenserwartung"] . " Jahre<br>". "</td>" ;
-                 echo "<td>".$row["gewicht"] . " kg<br>". "</td>";
-                 echo "<td>". $row["groesse"] . " m<br>"."</td>";
+                 echo "<td>".$row["gewicht"] . " g<br>". "</td>";
+                 echo "<td>". $row["groesse"] . " cm<br>"."</td>";
                  echo  "<td>". $row["mahlzeit"] . "<br>". "</td>";
 
                  echo "</tr>" ;

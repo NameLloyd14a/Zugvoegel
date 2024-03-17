@@ -249,7 +249,7 @@
         }
     </style>
 </head>
-<title>Zugvögel</title>
+<title>Zugvögel - Places</title>
 
 <body>
     <div class="navbar">
@@ -299,7 +299,7 @@
 
     <div class='img_Bachalpsee' onclick='openplacesbachalpsee()'>
         <div class="image-container">
-            <img src='Bilder/Bachalpsee.jpg'> 
+            <img src='Bilder/Bachalpsee-Sommer-Wetterhorn-Schreckhorn-Abendstimmung.jpg'> 
             <div class="bachalpseetext">Bachalpsee</div>
         </div>
     </div>
@@ -342,24 +342,24 @@
             window.location="funfact.php"; 
         }
         function openplacesbaumwipfelpfad() {
-            window.location="baumwipfelpfad.php"
+            window.location="/places/baumwipfelpfad.php"
         }
         function openplacesvogelwarte() {
-            window.location="vogelwarte.php"
+            window.location="/places/vogelwarte.php"
         }
         function openplacesbolledi() {
-            window.location="bolledimagadino.php"
+            window.location="/places/bolledimagadino.php"
         }
         function openplacesbachalpsee() {
-            window.location="bachalpsee.php"
+            window.location="/places/bachalpsee.php"
         }
         function openplacesoeschinensee() {
-            window.location="oeschinensee.php"
+            window.location="/places/oeschinensee.php"
         }
         function openplacesklingnauer() {
-            window.location="klingnauerstausee.php"
+            window.location="/places/klingnauerstausee.php"
         }
-         // Remove the call to openPlaces() to avoid automatic redirection
+        
 
     </script>
 </body>
