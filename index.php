@@ -410,7 +410,7 @@ $conn->close();
             Herzlich willkommen auf unserer Plattform und viel Freude beim Vogelbeobachten!
 
             </p>
-            <span class="inline-block h-1 w-10 rounded bg-indigo-500 mt-8 mb-6"></span>
+            <span class="inline-block h-1 w-10 rounded bg-green-500 mt-8 mb-6"></span>
             <h2 class="text-gray-900 font-medium title-font tracking-wider text-sm">Lukas Lisibach</h2>
             <p class="text-gray-500">Founder</p>
           </div>
