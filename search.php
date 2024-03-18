@@ -158,11 +158,7 @@
             transform: scale(0.95); /* Slight scaling when button is pressed */
         }
         
-        button, input {
-        font: 1em Hind, sans-serif;
-        line-height: 1.5em;
-        border: 1px, white;
-        }
+       
 
         .bar {
             display: flex;
@@ -212,11 +208,9 @@
             background-color: transparent;
         }
 
-        .search-btn {
-            background-color: black;
-            color: white;
+       
            
-        }
+        
         
         .suche{
             
@@ -353,7 +347,7 @@ $conn->close();
      <div >
         <form method="GET" action="search.php" style="display: flex; margin-top: 30px; justify-content:center ; align-items: center;height: 60px;overflow: hidden;" class="bar">
         <input type="search" name="search" pattern=".*\S.*" required autocomplete="off">
-        <button class="search-btn" type="submit">
+        
       <span>Search</span>
     </button>
     </form></div>
