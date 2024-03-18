@@ -347,7 +347,7 @@ $conn->close();
         </div>
         
     </div>
-    <h1 class="suchtitle" >Hier kannst du ein Vogel suchen.</h1>
+    <h1 class="suchtitle" >Datenbank nach Vogel durchsuchen:</h1>
 
     <div class= "hintergurndsuche">
      <div >
