@@ -13,7 +13,7 @@ Zugvögel is a website that can give users information about birds and suggest t
 ### Installation:
 #### Database:
 - create a new databese named "zugvoegel" with sql
-- import the file ``` databe/zugvoegel.sql ```
+- import the file ``` database/zugvoegel.sql ```
 
 If this does not work with MAMP you can also copy the raw files to ```C:\MAMP\db\mysql``` on your computer
 
