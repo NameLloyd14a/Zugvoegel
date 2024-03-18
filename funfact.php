@@ -122,7 +122,7 @@
     </style>
 </head>
 
-<title>Zugvögel</title>
+<title>Zugvögel - Funfacts</title>
 
 <body>
     <div class="navbar">

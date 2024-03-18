@@ -337,7 +337,7 @@
         }
     </style>
 </head>
-<title>Zugvögel</title>
+<title>Zugvögel - About</title>
 
 <body>
     <div class="navbar">

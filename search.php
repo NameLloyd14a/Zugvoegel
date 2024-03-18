@@ -284,7 +284,7 @@
     </style>
    
 </head>
-<title>Zugvögel</title>
+<title>Zugvögel - Suche</title>
 
 <?php
 //Nutzerdaten für Datenbank
