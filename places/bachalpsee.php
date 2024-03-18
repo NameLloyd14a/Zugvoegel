@@ -15,13 +15,16 @@
 
         .image {
             width: 70%;
+            padding-top:5px;
+            padding-left: 5px;
+            padding-bottom: 5px;
         }
 
         .logo {
             display: flex;
             justify-content: center;
             align-items: center;
-            width: 20%;
+            width: 250px;
         }
 
         .hedline {
@@ -33,11 +36,13 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
+            
         }
 
         .headline {
             color: aquamarine;
             font-weight: bold;
+            font-size: 30px;
         }
 
         .titel {

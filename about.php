@@ -37,10 +37,6 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            top: 0;
-            left: 0;
-            right: 0;
-            border-radius: 5px;
         }
 
         .headline {
