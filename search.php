@@ -12,14 +12,17 @@
         }
 
         .image {
-            width: 70%
+            width: 70% ;
+            padding-top:5px;
+            padding-left: 5px;
+            padding-bottom: 5px;
         }
 
         .logo {
             display: flex;
             justify-content: center;
             align-items: center;
-            width: 20%;
+            width: 250px;
         }
 
         .hedline {
@@ -41,7 +44,9 @@
         .headline {
             color: aquamarine;
             font-weight: bold;
+            font-size: 30px;
         }
+        
         
         .titel{
             color:black;
@@ -163,6 +168,8 @@
             display: flex;
             border: 1px, white;
             
+            
+            
         }
 
         .bar input {
@@ -176,6 +183,7 @@
             appearance: none;
             box-shadow: none; 
             color: white ;
+            
             font-size: large;
             
 
@@ -199,21 +207,25 @@
 
         }
 
-        
+        .hintergrundsuche {
+            margin-top: 5px;
+            background-color: transparent;
+        }
 
         .search-btn {
-            display: none; 
+            background-color: black;
             color: white;
+           
         }
         
         .suche{
             
             background-image: url("/Bilder/pexels-ilo-frey-2317904.jpg");
-            position: relative;
+            
             background-size: cover; /* Das Bild wird so skaliert, dass es den gesamten Bereich bedeckt */
-            background-position: center; /* Das Bild wird zentriert positioniert */
+            background-position: top; /* Das Bild wird zentriert positioniert */
             backdrop-filter: brightness(80%);
-            position: relative;
+            
             margin-top: 0; /* Setzt den oberen Rand auf 0 */
              
         }
@@ -250,6 +262,27 @@
             text-align: middle;
             font-size: 13px;
             
+        }
+        .suchtitle {
+            font-size: 30px;
+            font-weight: bold;
+            color: white;
+            margin-top: 200px;
+            text-align: center;
+            background-color: transparent !important;
+
+        }
+        .anzeigenichtsgefunden {
+
+            font-size: 30px;
+            font-weight: bold;
+            color: white;
+            margin-top: 200px;
+            text-align: center;
+            background-color: transparent !important;
+           
+            
+
         }
 
     
@@ -314,22 +347,23 @@ $conn->close();
         </div>
         
     </div>
-    <div class= "hintergurndsuche">
+    <h1 class="suchtitle" >Hier kannst du ein Vogel suchen.</h1>
 
+    <div class= "hintergurndsuche">
      <div >
-        <form method="GET" action="search.php" style="display: flex; margin-top: 20px; justify-content:center ; align-items: center;height: 100vh;overflow: hidden;" class="bar">
+        <form method="GET" action="search.php" style="display: flex; margin-top: 30px; justify-content:center ; align-items: center;height: 60px;overflow: hidden;" class="bar">
         <input type="search" name="search" pattern=".*\S.*" required autocomplete="off">
         <button class="search-btn" type="submit">
       <span>Search</span>
     </button>
     </form></div>
     </div>
-    <div id="search-results" class="suchresultate">
+    <div id="search-results" >
         <?php 
         if(isset($_GET['search'])) {
         if ($result->num_rows > 0) {
         while($row = $result->fetch_assoc()) {
-            echo "<span class = 'uberschrift'>" . "Suche nach: " . $row["name"] . "<br>"." </span>";
+            echo "<div class='suchresultate'>"."<span class = 'uberschrift'>" . "Suche nach: " . $row["name"] . "<br>"." </span>";
             echo "<div class = 'titelbild'>"."<img src='" . $row["bild"] . "' alt=''><br>";
             echo "<span class = 'bildtext'>" . $row["beschreibung"] . "<br>"." </span>". "</div>";
             
@@ -355,18 +389,23 @@ $conn->close();
                  echo "</tr>" ;
                  echo"</tbody>";
                  echo"</table>";
+                 echo"</div>";
      
                 
 
         
             }
-             
+     
+     
         }else {
-             echo "Keine Ergebnisse gefunden";
-        }
+            echo "<div class='anzeigenichtsgefunden' style='background-color: transparent;'>Keine Ergebnisse gefunden</div>";
     }
-        ?>
-    </div>
+        }
+           
+        ?>  
+  </div>
+     
+    
 
     
     <script>

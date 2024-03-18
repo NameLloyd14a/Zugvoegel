@@ -13,14 +13,17 @@
         }
 
         .image {
-            width: 70%
+            width: 70% ;
+            padding-top:5px;
+            padding-left: 5px;
+            padding-bottom: 5px;
         }
 
         .logo {
             display: flex;
             justify-content: center;
             align-items: center;
-            width: 20%;
+            width: 250px;
         }
 
         .hedline {
@@ -32,11 +35,16 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
+            top: 0;
+            left: 0;
+            right: 0;
+            border-radius: 5px;
         }
 
         .headline {
             color: aquamarine;
             font-weight: bold;
+            font-size: 30px;
         }
         
         .titel{
@@ -435,6 +443,7 @@ $conn->close();
         function openSearch() {
             window.location="search.php";
         }
+        
     </script>
 </body>
 </html>
