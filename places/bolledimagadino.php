@@ -68,8 +68,8 @@
             font-size: 18px;
             text-align: left;
             position: flex;
-            margin-left: 120px;
-            margin-right: 120px;
+            margin-left: 185px;
+            margin-right: 185px;
             
         }
 

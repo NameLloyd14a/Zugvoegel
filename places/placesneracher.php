@@ -68,8 +68,8 @@
             font-size: 18px;
             text-align: left;
             position: flex;
-            margin-left: 120px;
-            margin-right: 120px;
+            margin-left: 185px;
+            margin-right: 185px;
             
         }
 
@@ -178,7 +178,7 @@
         Das BirdLife-Naturzentrum Neeracherried ist nicht nur für Einzelbesucher offen, sondern auch für alle Arten von Gruppen, von Familien über Vereine, und Firmen bis zu Verwaltungen. Für Schulen gibt es spezielle Materialien. </p>
     </div>
     <div class="titelvideo">
-            <video autoplay controls width="85%">
+            <video controls width="85%">
                 <source src="/Bilder/Video.mp4" type="video/mp4">
             </video>
     </div>

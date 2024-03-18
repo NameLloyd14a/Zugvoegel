@@ -298,7 +298,7 @@
 
     <div class='img_LeBollediMagadino' onclick='openplacesbolledi()'>
         <div class="image-container">
-            <img src='Bilder/Le Bolle di Magadino.jpg'> 
+            <img src='Bilder/gambarogno-primavera-acqua-bolle-magadino.jpg'> 
             <div class="bolleditext">Le Bolle di Magadino</div>
         </div>
     </div>
@@ -312,14 +312,14 @@
 
     <div class='img_OeschineseeRundweg' onclick='openplacesoeschinensee()'>
         <div class="image-container">
-            <img src='Bilder/Oeschinensee Rundweg.jpg'> 
+            <img src='Bilder/52403_32001800.jpg'> 
             <div class="oeschinenseetext">Oeschinensee Rundweg</div>
         </div>
     </div>
 
     <div class='img_Klingnauer_Stausee' onclick='openplacesklingnauer()'>
         <div class="image-container">
-            <img src='Bilder/Klingnauer Stausee.jpg'> 
+            <img src='Bilder/klingnauer-stausee_aare_wasserkraftwerk-klingnau_gippingen_gippinger-grien.jpg'> 
             <div class="klingnauertext">Klingnauer Stausee</div>
         </div>
     </div>
