@@ -348,7 +348,7 @@ $conn->close();
         <form method="GET" action="search.php" style="display: flex; margin-top: 30px; justify-content:center ; align-items: center;height: 60px;overflow: hidden;" class="bar">
         <input type="search" name="search" pattern=".*\S.*" required autocomplete="off">
         
-      <span>Search</span>
+      
     </button>
     </form></div>
     </div>
