@@ -148,11 +148,6 @@
             <a class="menu-links" href="#" onclick="openFunFacts()">Fun Facts</a>
         </div>
     </div>
-
-    
-    <div id="content-container">
-        <!-- Content container for Fun Facts -->
-    </div>
     <script>
 
         function loadHomePage() {

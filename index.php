@@ -324,8 +324,8 @@ $conn->close();
         function openFunFacts() {
             window.location="funfact.php"; 
         }
-        function openpbtd() {
-            window.location="btd.php"
+        function openbtd() {
+            window.location="btd.php";
         }
     </script>
 </body>
